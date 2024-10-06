@@ -9,7 +9,7 @@ import {
   TCite,
   Button,
   Variants,
-} from "@yehonatan604/rainbow-plus-ui/src";
+} from "rainbow-plus-ui/src";
 import { Link } from "react-router-dom";
 
 const Home = () => {

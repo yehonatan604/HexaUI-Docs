@@ -5,7 +5,7 @@ import {
   FlexWrap,
   RainbowBorder,
   Variants,
-} from "@yehonatan604/rainbow-plus-ui";
+} from "rainbow-plus-ui/src";
 
 const RainbowBordersExample = () => {
   const mode = useTheme().mode;

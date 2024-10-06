@@ -6,7 +6,7 @@ import {
   FlexWrap,
   Card,
   Button,
-} from "@yehonatan604/rainbow-plus-ui";
+} from "rainbow-plus-ui/src";
 
 const CardExamples = () => {
   const { Info, Success, Warning } = Variants;

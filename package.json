@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.9",
-    "@yehonatan604/rainbow-plus-ui": "^0.0.105",
+    "rainbow-plus-ui": "^0.2.13",
     "react": "^18.3.1",
     "react-best-gradient-color-picker": "^3.0.10",
     "react-datepicker": "^7.4.0",

@@ -1,11 +1,4 @@
-import {
-  Variants,
-  Sizes,
-  Flex,
-  FlexTypes,
-  FlexWrap,
-  Button,
-} from "@yehonatan604/rainbow-plus-ui";
+import { Variants, Sizes, Flex, FlexTypes, FlexWrap, Button } from "rainbow-plus-ui/src";
 
 const ButtonExamples = () => {
   const { Info, Success, Warning, Failure, Lime, Cyan, Purple, Pink } = Variants;

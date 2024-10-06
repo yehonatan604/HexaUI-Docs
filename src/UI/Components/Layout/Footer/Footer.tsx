@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaReddit, FaTwitter } from "react-icons/fa6";
 import {
   useTheme,
-  Footer,
+  Footer as RpFooter,
   FlexTypes,
   FlexDir,
   Flex,
-} from "@yehonatan604/rainbow-plus-ui/src";
+} from "rainbow-plus-ui/src";
 
-const FooterExample = () => {
+const Footer = () => {
   const mode = useTheme().mode;
   const bgColor = mode === "light" ? "bg-zinc-100" : "bg-zinc-800";
   const textColor = mode === "light" ? "text-zinc-900" : "text-zinc-300";
@@ -16,7 +16,7 @@ const FooterExample = () => {
 
   return (
     <footer>
-      <Footer
+      <RpFooter
         bgColor={bgColor}
         textColor={textColor}
         reservedColor={reservedColor}
@@ -25,22 +25,22 @@ const FooterExample = () => {
         childrenDirection={FlexDir.Row}
         className="p-2 px-5"
       >
-        <Footer.Brand className="hover:opacity-60 cursor-pointer">
+        <RpFooter.Brand className="hover:opacity-60 cursor-pointer">
           Rainbow UI
-        </Footer.Brand>
+        </RpFooter.Brand>
         <Flex className="gap-10">
-          <Footer.Brand to="https://www.facebook.com" className="hover:opacity-60">
+          <RpFooter.Brand to="https://www.facebook.com" className="hover:opacity-60">
             <FaFacebook size={30} />
-          </Footer.Brand>
-          <Footer.Brand to="https://www.instagram.com" className="hover:opacity-60">
+          </RpFooter.Brand>
+          <RpFooter.Brand to="https://www.instagram.com" className="hover:opacity-60">
             <FaInstagram size={30} />
-          </Footer.Brand>
-          <Footer.Brand to="https://www.twitter.com" className="hover:opacity-60">
+          </RpFooter.Brand>
+          <RpFooter.Brand to="https://www.twitter.com" className="hover:opacity-60">
             <FaTwitter size={30} />
-          </Footer.Brand>
-          <Footer.Brand to="https://www.reddit.com" className="hover:opacity-60">
+          </RpFooter.Brand>
+          <RpFooter.Brand to="https://www.reddit.com" className="hover:opacity-60">
             <FaReddit size={30} />
-          </Footer.Brand>
+          </RpFooter.Brand>
         </Flex>
         <Flex className="gap-10">
           <Flex
@@ -76,9 +76,9 @@ const FooterExample = () => {
             </Link>
           </Flex>
         </Flex>
-      </Footer>
+      </RpFooter>
     </footer>
   );
 };
 
-export default FooterExample;
+export default Footer;

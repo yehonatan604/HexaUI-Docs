@@ -1,5 +1,5 @@
-import { useTheme, Flex, FlexTypes, FlexWrap } from "@yehonatan604/rainbow-plus-ui";
-import AutoGrid from "@yehonatan604/rainbow-plus-ui/src/UI/Components/Layout/Grid/Component";
+import { useTheme, Flex, FlexTypes, FlexWrap } from "rainbow-plus-ui/src";
+import { Grid } from "rainbow-plus-ui/src";
 
 const GridExample = () => {
   const mode = useTheme().mode;
@@ -12,7 +12,7 @@ const GridExample = () => {
       wrap={FlexWrap.Wrap}
       className="m-auto mb-5 gap-4 w-3/5 text-2xl"
     >
-      <AutoGrid
+      <Grid
         cols={3}
         showBorder
         rowsArr={[

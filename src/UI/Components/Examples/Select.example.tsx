@@ -5,7 +5,7 @@ import {
   FlexWrap,
   Select,
   Variants,
-} from "@yehonatan604/rainbow-plus-ui";
+} from "rainbow-plus-ui/src";
 
 const SelectExamples = () => {
   const mode = useTheme().mode;

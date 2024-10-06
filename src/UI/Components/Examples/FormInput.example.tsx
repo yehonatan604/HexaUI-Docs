@@ -6,8 +6,8 @@ import {
   Variants,
   Checkbox,
   ColorPicker,
-} from "@yehonatan604/rainbow-plus-ui/src";
-import RangeInput from "@yehonatan604/rainbow-plus-ui/src/UI/Components/Forms/RangeInput/Component";
+  RangInput as RangeInput,
+} from "rainbow-plus-ui/src";
 import DatePicker from "react-datepicker";
 
 const FormInputExamples = () => {

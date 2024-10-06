@@ -15,8 +15,8 @@ import {
   Title,
   useTheme,
   Variants,
-} from "@yehonatan604/rainbow-plus-ui/src";
-import { TitleProps } from "@yehonatan604/rainbow-plus-ui/src/UI/Components/Typography/Title/Props";
+} from "rainbow-plus-ui/src";
+import { TitleProps } from "rainbow-plus-ui/src/UI/Components/Typography/Title/Props";
 
 const ListExample = () => {
   const mode = useTheme().mode;

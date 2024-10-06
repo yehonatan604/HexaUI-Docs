@@ -1,10 +1,4 @@
-import {
-  Flex,
-  FlexTypes,
-  FlexWrap,
-  RingBorder,
-  Variants,
-} from "@yehonatan604/rainbow-plus-ui/";
+import { Flex, FlexTypes, FlexWrap, RingBorder, Variants } from "rainbow-plus-ui/src";
 
 const RingExamples = () => {
   return (

@@ -7,17 +7,11 @@ import {
   ListStyleTypes,
   RainbowBorder,
   Sizes,
-} from "@yehonatan604/rainbow-plus-ui/src";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { stackoverflowDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+} from "rainbow-plus-ui/src";
+import { installEx, buttonEx, styleEx } from "../../../Data/Constants/CodeExamples/Start";
+import HighLighter from "../../Components/Common/HighLighter/Component";
 
 const Start = () => {
-  const customHighlighterStyle = {
-    borderRadius: "10px",
-    backgroundColor: "#1a202c",
-    padding: "20px",
-  };
-
   return (
     <Flex
       direction={FlexDir.Col}
@@ -39,12 +33,7 @@ const Start = () => {
           To install Rainbow Plus UI, run the following command in your terminal:
         </p>
         <RainbowBorder className="text-sm ml-4 mt-4">
-          <SyntaxHighlighter
-            style={stackoverflowDark}
-            customStyle={customHighlighterStyle}
-          >
-            npm install rainbow-plus-ui
-          </SyntaxHighlighter>
+          <HighLighter>{installEx}</HighLighter>
         </RainbowBorder>
       </div>
 
@@ -55,13 +44,7 @@ const Start = () => {
           this:
         </p>
         <RainbowBorder className="ml-4 text-sm mt-4">
-          <SyntaxHighlighter
-            style={stackoverflowDark}
-            language="typescript"
-            customStyle={customHighlighterStyle}
-          >
-            {`import { Button } from 'rainbow-plus-ui';\n\nfunction App() {\n  return (\n    <Button label="Click me" />\n  );\n}`}
-          </SyntaxHighlighter>
+          <HighLighter>{buttonEx}</HighLighter>
         </RainbowBorder>
       </div>
 
@@ -135,7 +118,7 @@ const Start = () => {
               can define custom themes that apply globally across your app, giving you
               full control over component behavior and appearance. This method ensures
               that your UI adheres to your brand's identity while still utilizing the
-              efficiency of pre-built, maintainable components. y
+              efficiency of pre-built, maintainable components.
             </p>,
           ]}
         />
@@ -145,13 +128,7 @@ const Start = () => {
           <Button variant="purple">Custom Styles</Button>
         </Flex>
         <RainbowBorder className=" ml-4 text-sm mt-4">
-          <SyntaxHighlighter
-            language="typescript"
-            style={stackoverflowDark}
-            customStyle={customHighlighterStyle}
-          >
-            {`import { Button } from 'rainbow-plus-ui';\n\nfunction App() {\n  return (\n    <Button variant="success">\n        Click\n    </Button>\n  );\n}`}
-          </SyntaxHighlighter>
+          <HighLighter>{styleEx}</HighLighter>
         </RainbowBorder>
       </div>
 
