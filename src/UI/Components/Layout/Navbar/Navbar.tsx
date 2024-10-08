@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa6";
 import { BiUserCircle } from "react-icons/bi";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
-import { Navbar as RpNavbar, Flex, FlexTypes, ThemeToggler } from "rainbow-plus-ui/src";
+import { Navbar as RpNavbar, Flex, ThemeToggler } from "react-hexa-dev/components";
+import { FlexTypes } from "react-hexa-dev/constants";
 
 const Navbar = () => {
   const [isMobileMenuOpen, toggle] = useState(false);
@@ -18,24 +19,14 @@ const Navbar = () => {
           <FaBars />
         </RpNavbar.Toggle>
         <RpNavbar.Collapse isMobileMenuOpen={isMobileMenuOpen}>
-          <RpNavbar.Link to="/components" activeColor="text-amber-200">
-            Components
-          </RpNavbar.Link>
-          <RpNavbar.Link to="/Hooks" activeColor="text-amber-200">
-            Hooks
-          </RpNavbar.Link>
-          <RpNavbar.Link to="/Helpers" activeColor="text-amber-200">
-            Helpers
-          </RpNavbar.Link>
-          <RpNavbar.Link to="/Types" activeColor="text-amber-200">
-            Types
-          </RpNavbar.Link>
-          <RpNavbar.Link to="/download" activeColor="text-amber-200">
-            Download
-          </RpNavbar.Link>
+          <RpNavbar.Link to="/components">Components</RpNavbar.Link>
+          <RpNavbar.Link to="/Hooks">Hooks</RpNavbar.Link>
+          <RpNavbar.Link to="/Helpers">Helpers</RpNavbar.Link>
+          <RpNavbar.Link to="/Types">Types</RpNavbar.Link>
+          <RpNavbar.Link to="/download">Download</RpNavbar.Link>
         </RpNavbar.Collapse>
         <RpNavbar.Brand>
-          <Flex align={FlexTypes.Center} className="gap-4">
+          <Flex options={{ align: FlexTypes.Center }} className="gap-4">
             <ThemeToggler
               darkIcon={<MdOutlineDarkMode />}
               lightIcon={<MdOutlineLightMode />}

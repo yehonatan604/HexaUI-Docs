@@ -11,11 +11,11 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.9",
-    "rainbow-plus-ui": "^0.2.13",
     "react": "^18.3.1",
     "react-best-gradient-color-picker": "^3.0.10",
     "react-datepicker": "^7.4.0",
     "react-dom": "^18.3.1",
+    "react-hexa-dev": "^0.1.11",
     "react-icons": "^5.3.0",
     "react-router-dom": "^6.26.2",
     "react-syntax-highlighter": "^15.5.0"

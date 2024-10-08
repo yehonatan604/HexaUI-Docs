@@ -3,15 +3,10 @@ import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import "react-datepicker/dist/react-datepicker.css";
 import "./main.css";
-import { ThemeProvider, ColorPaletteProvider } from "rainbow-plus-ui/src";
-import "rainbow-plus-ui/dist/main.css";
+import "react-hexa-dev/dist/index.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ThemeProvider>
-      <ColorPaletteProvider>
-        <App />
-      </ColorPaletteProvider>
-    </ThemeProvider>
+    <App />
   </StrictMode>
 );

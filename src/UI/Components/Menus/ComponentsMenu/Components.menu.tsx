@@ -22,7 +22,9 @@ const ComponentsMenu = () => {
       <Sidebar.Item icon={<GiAccordion />}>
         <Link to="/components/common/accordion">Accordion</Link>
       </Sidebar.Item>
-      <Sidebar.Item icon={<RxButton />}>Button</Sidebar.Item>
+      <Sidebar.Item icon={<RxButton />}>
+        <Link to="/components/common/button">Button</Link>
+      </Sidebar.Item>
       <Sidebar.Item icon={<CgCardClubs />}>Card</Sidebar.Item>
       <Sidebar.Item icon={<BiBorderRadius />}>RainbowBorder</Sidebar.Item>
       <Sidebar.Item icon={<PiFrameCorners />}>Ring</Sidebar.Item>

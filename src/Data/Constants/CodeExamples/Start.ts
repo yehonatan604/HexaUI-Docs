@@ -1,4 +1,4 @@
-const installEx = "npm install rainbow-plus-ui";
+const installEx = "npm install rainbow-plus-ui@latest";
 const buttonEx = `import { Button } from 'rainbow-plus-ui/src';
 
 function App() {
