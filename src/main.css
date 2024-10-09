@@ -1,12 +1,7 @@
 @import url("./UI/Styles/Tailwind.css");
-@import url("./UI/Styles/RangeInput.css");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  background-color: #18181b;
 }

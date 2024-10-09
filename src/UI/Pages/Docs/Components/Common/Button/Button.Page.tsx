@@ -1,14 +1,6 @@
-import {
-  Button,
-  Flex,
-  FlexDir,
-  FlexTypes,
-  Hr,
-  RainbowBorder,
-  Variants,
-} from "rainbow-plus-ui/src";
+import { Button, Flex, Hr, RainbowBorder } from "react-hexa-dev/components";
+import { FlexDir, FlexTypes } from "react-hexa-dev/constants";
 import HighLighter from "../../../../../../UI/Components/Common/HighLighter/Component";
-import ComponentsMenu from "../../../../../../UI/Components/Menus/ComponentsMenu/Components.menu";
 import {
   buttonEx1,
   buttonEx2,
@@ -17,13 +9,12 @@ import {
 const ButtonPage = () => {
   return (
     <div className="flex justify-center">
-      <div className="sticky top-0 h-[93vh] overflow-y-auto overflow-x-hidden bg-zinc-700">
-        <ComponentsMenu />
-      </div>
       <Flex
-        direction={FlexDir.Col}
-        justify={FlexTypes.Start}
-        align={FlexTypes.Center}
+        options={{
+          direction: FlexDir.Col,
+          justify: FlexTypes.Start,
+          align: FlexTypes.Center,
+        }}
         className={`pb-1 gap-y-9 mx-auto w-3/5`}
       >
         <h2 className="text-4xl font-extrabold font-serif mt-10">Button</h2>
@@ -44,11 +35,11 @@ const ButtonPage = () => {
           </RainbowBorder>
         </div>
 
-        <Flex justify="center">
+        <Flex options={{ justify: FlexTypes.Center }}>
           <Button>Standard</Button>
         </Flex>
 
-        <Hr borderWidth="w-1/2" />
+        <Hr options={{ border: { thickness: "w-1/2" } }} />
 
         <div className="w-3/4">
           <h2 className="text-2xl font-bold">Customizing Button Color & Sizes</h2>
@@ -61,21 +52,26 @@ const ButtonPage = () => {
           </RainbowBorder>
         </div>
 
-        <Flex className="gap-4" justify="center" align="center">
-          <Button variant="success" size={"md"}>
+        <Flex className="gap-4" options={{ justify: "center", align: "center" }}>
+          <Button
+            options={{
+              bgVariant: "success",
+              size: "md",
+            }}
+          >
             Success
           </Button>
-          <Button variant={Variants.Warning} size={"lg"}>
-            Warning
-          </Button>
+          <Button options={{ bgVariant: "warning", size: "lg" }}>Warning</Button>
         </Flex>
 
-        <Hr borderWidth="w-1/2" />
+        <Hr options={{ border: { thickness: "w-1/2" } }} />
 
         <Flex
-          direction={FlexDir.Col}
-          justify={FlexTypes.Start}
-          align={FlexTypes.Start}
+          options={{
+            direction: FlexDir.Col,
+            justify: FlexTypes.Start,
+            align: FlexTypes.Start,
+          }}
           className="w-3/4 gap-4 mb-9"
         >
           <h2 className="text-2xl font-bold">Props</h2>

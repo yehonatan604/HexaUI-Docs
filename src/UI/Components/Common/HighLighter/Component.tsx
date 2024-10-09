@@ -1,36 +1,36 @@
-import { TComponent } from "rainbow-plus-ui/src";
+import { TComponent } from "react-hexa-dev/types";
 import { BiCopy } from "react-icons/bi";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { stackoverflowDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const HighLighter = (props: TComponent<"div">) => {
   const { children, ...componentProps } = props;
 
   const customHighlighterStyle = {
-    borderRadius: "10px",
     backgroundColor: "#1a202c",
     padding: "20px",
   };
 
   return (
-    <>
-      <BiCopy
-        className="cursor-pointer hover:opacity-50 p-1"
-        size={30}
-        color="black"
-        onClick={() => {
-          navigator.clipboard.writeText(children as string);
-        }}
-      />
-      <div className="text-sm m-1 hover:opacity-70" {...componentProps}></div>
-      <SyntaxHighlighter
-        style={stackoverflowDark}
-        customStyle={customHighlighterStyle}
-        language="typescript"
-      >
-        {children as string}
-      </SyntaxHighlighter>
-    </>
+    <div dir="rtl">
+      <div className="mr-[.9rem] mb-[-2.8rem] hover:opacity-70 cursor-pointer">
+        <BiCopy
+          size={25}
+          onClick={() => {
+            navigator.clipboard.writeText(children as string);
+          }}
+        />
+      </div>
+      <div dir="ltr" className="text-sm m-1" {...componentProps}>
+        <SyntaxHighlighter
+          style={dark}
+          customStyle={customHighlighterStyle}
+          language="typescript"
+        >
+          {children as string}
+        </SyntaxHighlighter>
+      </div>
+    </div>
   );
 };
 

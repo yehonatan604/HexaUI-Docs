@@ -1,4 +1,4 @@
-import { Sidebar, Hr } from "rainbow-plus-ui/src";
+import { Sidebar, Hr } from "react-hexa-dev/components";
 import { BiBorderRadius } from "react-icons/bi";
 import { BsBorderAll } from "react-icons/bs";
 import { CgCardClubs } from "react-icons/cg";
@@ -20,10 +20,10 @@ const ComponentsMenu = () => {
     <Sidebar>
       <h1 className="text-2xl mt-4 mx-auto font-serif">Common</h1>
       <Sidebar.Item icon={<GiAccordion />}>
-        <Link to="/components/common/accordion">Accordion</Link>
+        <Link to="/components/accordion">Accordion</Link>
       </Sidebar.Item>
       <Sidebar.Item icon={<RxButton />}>
-        <Link to="/components/common/button">Button</Link>
+        <Link to="/components/button">Button</Link>
       </Sidebar.Item>
       <Sidebar.Item icon={<CgCardClubs />}>Card</Sidebar.Item>
       <Sidebar.Item icon={<BiBorderRadius />}>RainbowBorder</Sidebar.Item>
@@ -31,7 +31,7 @@ const ComponentsMenu = () => {
       <Sidebar.Item label="new!" icon={<LuSun />}>
         ThemeToggler
       </Sidebar.Item>
-      <Hr borderWidth="w-5/6" />
+      <Hr options={{ border: { thickness: "w-5/6" } }} />
       <h1 className="text-2xl mx-auto font-serif">Forms</h1>
       <Sidebar.Item icon={<IoIosCheckboxOutline />}>Checkbox</Sidebar.Item>
       <Sidebar.Item icon={<IoIosColorPalette />}>ColorPicker</Sidebar.Item>
@@ -39,16 +39,16 @@ const ComponentsMenu = () => {
       <Sidebar.Item icon={<CiSliderHorizontal />}>RangeInput</Sidebar.Item>
       <Sidebar.Item icon={<GoSingleSelect />}>Select</Sidebar.Item>
       <Sidebar.Item icon={<RiInputMethodLine />}>TextInput</Sidebar.Item>
-      <Hr borderWidth="w-5/6" />
+      <Hr options={{ border: { thickness: "w-5/6" } }} />
       <h1 className="text-2xl mx-auto font-serif">Layout</h1>
       <Sidebar.Item icon={<Gi3dMeeple />}>Flex</Sidebar.Item>
       <Sidebar.Item icon={<BsBorderAll />}>Grid</Sidebar.Item>
-      <Hr borderWidth="w-5/6" />
+      <Hr options={{ border: { thickness: "w-5/6" } }} />
       <h1 className="text-2xl mx-auto font-serif">Navigation</h1>
       <Sidebar.Item icon={<TbLayoutBottombarFilled />}>Footer</Sidebar.Item>
       <Sidebar.Item icon={<TbLayoutNavbarFilled />}>Navbar</Sidebar.Item>
       <Sidebar.Item icon={<PiSidebar />}>Sidebar</Sidebar.Item>
-      <Hr borderWidth="w-5/6" />
+      <Hr options={{ border: { thickness: "w-5/6" } }} />
       <h1 className="text-2xl mx-auto font-serif">Typography</h1>
       <Sidebar.Item icon={<MdOutlineHorizontalRule />}>Hr</Sidebar.Item>
       <Sidebar.Item icon={<PiListDashes />}>List</Sidebar.Item>

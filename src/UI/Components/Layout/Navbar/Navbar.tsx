@@ -11,9 +11,9 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50">
-      <RpNavbar>
+      <RpNavbar options={{ bgVariant: "black" }}>
         <RpNavbar.Brand as={Link} to="/">
-          Rainbow UI
+          Hexa UI
         </RpNavbar.Brand>
         <RpNavbar.Toggle toggle={toggle}>
           <FaBars />

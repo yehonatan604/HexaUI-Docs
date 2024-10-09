@@ -1,29 +1,20 @@
-import {
-  Accordion,
-  Flex,
-  FlexDir,
-  FlexTypes,
-  Hr,
-  RainbowBorder,
-  Variants,
-} from "rainbow-plus-ui/src";
+import { Accordion, Flex, Hr, RainbowBorder } from "react-hexa-dev/components";
 import HighLighter from "../../../../../../UI/Components/Common/HighLighter/Component";
+import { FlexDir, FlexTypes } from "react-hexa-dev/constants";
 import {
   accordionEx1,
   accordionEx2,
 } from "../../../../../../Data/Constants/CodeExamples/Accordion";
-import ComponentsMenu from "../../../../../../UI/Components/Menus/ComponentsMenu/Components.menu";
 
 const AccordionPage = () => {
   return (
     <div className="flex justify-center">
-      <div className="sticky top-0 h-[93vh] overflow-y-auto overflow-x-hidden bg-zinc-700">
-        <ComponentsMenu />
-      </div>
       <Flex
-        direction={FlexDir.Col}
-        justify={FlexTypes.Start}
-        align={FlexTypes.Center}
+        options={{
+          direction: FlexDir.Col,
+          justify: FlexTypes.Start,
+          align: FlexTypes.Center,
+        }}
         className={`pb-1 gap-y-9 mx-auto w-3/5`}
       >
         <h2 className="text-4xl font-extrabold font-serif mt-10">Accordion</h2>
@@ -40,13 +31,15 @@ const AccordionPage = () => {
           <p className="mt-4 mb-8 text-lg ">
             Here’s a basic example of how to use the Accordion component:
           </p>
-          <RainbowBorder className="text-sm ml-4 mt-4">
-            <HighLighter>{accordionEx1}</HighLighter>
-          </RainbowBorder>
+          <HighLighter>{accordionEx1}</HighLighter>
         </div>
 
         <Flex className="w-1/4">
-          <Accordion title="Accordion Standard">
+          <Accordion
+            options={{
+              title: "Accordion Standard",
+            }}
+          >
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
               doloremque, voluptates, quos, quidem vel quibusdam voluptatum voluptatem
@@ -55,7 +48,7 @@ const AccordionPage = () => {
             </p>
           </Accordion>
         </Flex>
-        <Hr borderWidth="w-1/2" />
+        <Hr options={{ border: { thickness: "w-1/2" } }} />
         <div className="w-3/4">
           <h2 className="text-2xl font-bold">Customizing the Border Color</h2>
           <p className="mt-4 mb-8 text-lg ">
@@ -69,7 +62,12 @@ const AccordionPage = () => {
 
         {/* Accordion Variants by using string */}
         <div className="w-1/4">
-          <Accordion title="Accordion Info" variant={"info"}>
+          <Accordion
+            options={{
+              title: "Accordion Info",
+              textVariant: "info",
+            }}
+          >
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
               doloremque, voluptates, quos, quidem vel quibusdam voluptatum voluptatem
@@ -81,7 +79,12 @@ const AccordionPage = () => {
 
         {/* Accordion Variants by using Variants */}
         <div className="w-1/4">
-          <Accordion title="Accordion Success" variant={Variants.Success}>
+          <Accordion
+            options={{
+              title: "Accordion Warning",
+              textVariant: "warning",
+            }}
+          >
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
               doloremque, voluptates, quos, quidem vel quibusdam voluptatum voluptatem
@@ -91,12 +94,14 @@ const AccordionPage = () => {
           </Accordion>
         </div>
 
-        <Hr borderWidth="w-1/2" />
+        <Hr options={{ border: { thickness: "w-1/2" } }} />
 
         <Flex
-          direction={FlexDir.Col}
-          justify={FlexTypes.Start}
-          align={FlexTypes.Start}
+          options={{
+            direction: FlexDir.Col,
+            justify: FlexTypes.Start,
+            align: FlexTypes.Start,
+          }}
           className="w-3/4 gap-4 mb-9"
         >
           <h2 className="text-2xl font-bold">Props</h2>

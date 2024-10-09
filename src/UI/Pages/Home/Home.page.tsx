@@ -1,15 +1,6 @@
-import {
-  Flex,
-  FlexDir,
-  FlexTypes,
-  List,
-  Sizes,
-  Hr,
-  Quote,
-  TCite,
-  Button,
-  Variants,
-} from "rainbow-plus-ui/src";
+import { Flex, List, Hr, Quote, Button } from "react-hexa-dev/components";
+import { FlexDir, FlexTypes, Sizes } from "react-hexa-dev/constants";
+import { TCite } from "react-hexa-dev/types";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -17,17 +8,20 @@ const Home = () => {
     url: "http://www.worldwildlife.org/who/index.html",
     text: "www.worldwildlife.org",
     placement: "start",
+    variant: "info",
   };
 
   return (
     <Flex
-      direction={FlexDir.Col}
-      justify={FlexTypes.Start}
-      align={FlexTypes.Center}
+      options={{
+        direction: FlexDir.Col,
+        justify: FlexTypes.Start,
+        align: FlexTypes.Center,
+      }}
       className={` pb-1 gap-y-9`}
     >
-      <h1 className="text-4xl font-extrabold text-indigo-600 sm:text-5xl mt-4">
-        Rainbow Plus UI
+      <h1 className="text-4xl font-extrabold text-select sm:text-5xl mt-4">
+        React Hexa UI
       </h1>
       <p className="mt-4 text-lg max-md:p-10">
         A modern, flexible, and lightweight React component library designed to make
@@ -35,36 +29,50 @@ const Home = () => {
       </p>
 
       <>
-        <h2 className="text-2xl font-bold">Why Rainbow Plus UI?</h2>
+        <h2 className="text-2xl font-bold">Why Hexa UI?</h2>
         <List
           className="mt-4 space-y-2"
-          items={[
-            "🚀 Fast and Lightweight",
-            "🎨 Tailwind CSS Integration",
-            "🔧 Customizable Components",
-            "📦 Modular and Scalable",
-            "📚 Developer Friendly",
-          ]}
-          fontSize={Sizes.Lg}
-          align={FlexTypes.Start}
+          options={{
+            items: [
+              "🚀 Fast and Lightweight",
+              "🎨 Tailwind CSS Integration",
+              "🔧 Customizable Components",
+              "📦 Modular and Scalable",
+              "📚 Developer Friendly",
+            ],
+            fontSize: Sizes.Lg,
+            align: FlexTypes.Start,
+          }}
         />
       </>
-      <Button size={Sizes.Lg} variant={Variants.Success} className="mt-10">
-        <Link to="/start">Getting Started</Link>
+      <Button
+        options={{
+          size: Sizes.Lg,
+        }}
+        className="mt-10"
+      >
+        <Link to="/components">Components</Link>
       </Button>
       <Flex
-        direction={FlexDir.Col}
-        justify={FlexTypes.Center}
-        align={FlexTypes.Center}
+        options={{
+          direction: FlexDir.Col,
+          justify: FlexTypes.Center,
+          align: FlexTypes.Center,
+        }}
         className="mt-10 gap-4"
       >
-        <Hr borderWidth="w-1/2" />
-        <Quote cite={cite as string & TCite} gap="gap-4">
+        <Hr options={{ border: { thickness: "w-1/2" } }} />
+        <Quote
+          cite={cite as string & TCite}
+          options={{
+            gap: 4,
+          }}
+        >
           For 50 years, WWF has been protecting the future of nature. The world's leading
           conservation organization, WWF works in 100 countries and is supported by 1.2
           million members in the United States and close to 5 million globally.
         </Quote>
-        <Hr borderWidth="w-1/2" />
+        <Hr options={{ border: { thickness: "w-1/2" } }} />{" "}
       </Flex>
     </Flex>
   );

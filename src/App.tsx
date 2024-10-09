@@ -1,12 +1,21 @@
 import { BrowserRouter } from "react-router-dom";
 import Navbar from "./UI/Components/Layout/Navbar/Navbar";
+import { useTheme } from "react-hexa-dev/hooks";
+import AppRouter from "./UI/Router/AppRouter";
 
 function App() {
+  const { colors, mode } = useTheme();
+
+  const textColor = mode === "dark" ? colors.textDark : colors.black;
+  const bgColor = mode === "dark" ? colors.backgroundDark : colors.backgroundLight;
+
   return (
     <div>
       <BrowserRouter>
-        <Navbar />
-        <div className={`max-h-[93vh] overflow-y-auto`}>{/* <AppRouter /> */}</div>
+        <div className={`min-h-screen overflow-y-auto text-${textColor} bg-${bgColor}`}>
+          <Navbar />
+          {<AppRouter />}
+        </div>
       </BrowserRouter>
     </div>
   );
