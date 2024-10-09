@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <div className={`min-h-screen overflow-y-auto text-${textColor} bg-${bgColor}`}>
+        <div className={`min-h-screen overflow-hidden text-${textColor} bg-${bgColor}`}>
           <Navbar />
           {<AppRouter />}
         </div>

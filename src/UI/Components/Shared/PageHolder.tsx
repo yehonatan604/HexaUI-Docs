@@ -18,7 +18,7 @@ const PageHolder = ({ of }: { of: string }) => {
       <div className="h-[93vh] overflow-y-auto overflow-x-hidden">
         <div className="w-[17vw]">{menu}</div>
       </div>
-      <div className="max-h-[93vh] h-93vh w-full overflow-y-scroll">
+      <div className="max-h-[93dvh] h-93vh w-full overflow-y-auto">
         <Outlet />
       </div>
     </Flex>
