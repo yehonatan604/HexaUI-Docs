@@ -1,20 +1,22 @@
-const buttonEx1 = `import { Button } from 'rainbow-plus-ui/src';
+import { componentsPath } from "../Paths";
+
+const buttonEx1 = `import { Button } from '${componentsPath}';
 
 <>
-    <Button>Standard</Button>
+    <Button>Click Me</Button>
 </>
 `;
-const buttonEx2 = `import { Button, Flex, Sizes, Variants } from 'rainbow-plus-ui/src'
+const buttonEx2 = `import { Button, Flex, Sizes } from '${componentsPath}'
 <>
-    <Flex classname="gap-4">
-        <Button variant="success" size="md">
-            Success
-        </Button>
-
-        <Button variant={Variants.Warning} size={Sizes.Lg}>
-            Warning
-        </Button>
-    </Flex>
+  <Flex classname="gap-4">
+      <Button
+          options={{
+          size: Sm,
+          bgVariant: "success-d",
+          textVariant: "white-l",
+          }}
+      >
+  </Flex>
 </>
 
 `;

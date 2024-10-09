@@ -25,7 +25,7 @@ const HighLighter = (props: TComponent<"div">) => {
         <SyntaxHighlighter
           style={dark}
           customStyle={customHighlighterStyle}
-          language="typescript"
+          language="js"
         >
           {children as string}
         </SyntaxHighlighter>

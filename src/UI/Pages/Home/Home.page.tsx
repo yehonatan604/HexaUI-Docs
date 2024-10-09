@@ -48,10 +48,11 @@ const Home = () => {
       <Button
         options={{
           size: Sizes.Lg,
+          bgVariant: "success-d",
         }}
         className="mt-10"
       >
-        <Link to="/components">Components</Link>
+        <Link to="/start">Getting Started</Link>
       </Button>
       <Flex
         options={{

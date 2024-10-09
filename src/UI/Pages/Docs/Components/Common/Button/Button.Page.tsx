@@ -15,7 +15,7 @@ const ButtonPage = () => {
           justify: FlexTypes.Start,
           align: FlexTypes.Center,
         }}
-        className={`pb-1 gap-y-9 mx-auto w-3/5`}
+        className={`pb-1 gap-y-9 mx-auto w-4/5`}
       >
         <h2 className="text-4xl font-extrabold font-serif mt-10">Button</h2>
 
@@ -36,7 +36,7 @@ const ButtonPage = () => {
         </div>
 
         <Flex options={{ justify: FlexTypes.Center }}>
-          <Button>Standard</Button>
+          <Button>Click Me</Button>
         </Flex>
 
         <Hr options={{ border: { thickness: "w-1/2" } }} />
@@ -55,26 +55,24 @@ const ButtonPage = () => {
         <Flex className="gap-4" options={{ justify: "center", align: "center" }}>
           <Button
             options={{
-              bgVariant: "success",
+              bgVariant: "success-d",
+              textVariant: "white-l",
               size: "md",
             }}
           >
             Success
           </Button>
-          <Button options={{ bgVariant: "warning", size: "lg" }}>Warning</Button>
+          <Button options={{ bgVariant: "warning", textVariant: "info-d", size: "lg" }}>
+            Warning
+          </Button>
         </Flex>
 
         <Hr options={{ border: { thickness: "w-1/2" } }} />
 
-        <Flex
-          options={{
-            direction: FlexDir.Col,
-            justify: FlexTypes.Start,
-            align: FlexTypes.Start,
-          }}
-          className="w-3/4 gap-4 mb-9"
-        >
-          <h2 className="text-2xl font-bold">Props</h2>
+        <Flex options={{ direction: FlexDir.Col }} className="mb-9">
+          <Flex options={{ justify: FlexTypes.Start }} className="w-full">
+            <h2 className="text-2xl font-bold">Props</h2>
+          </Flex>
           <table>
             <thead className="bg-zinc-700">
               <tr>
@@ -83,6 +81,7 @@ const ButtonPage = () => {
                 <th className="py-2 px-4 text-left font-semibold border-b">
                   Description
                 </th>
+                <th className="py-2 px-4 text-left font-semibold border-b">Required</th>
               </tr>
             </thead>
             <tbody>
@@ -96,18 +95,93 @@ const ButtonPage = () => {
                 <td className="py-2 px-4 border-b">
                   The content inside the button. Usually text. an icon or both.
                 </td>
+                <td className="py-2 px-4 border-b">true</td>
               </tr>
               <tr>
                 <td className="py-2 px-4 border-b">
-                  <code>variant</code>
+                  <code>Options</code>
+                </td>
+                <td className="py-2 px-4 border-b">
+                  <code>ButtonOptions</code>
+                </td>
+                <td className="py-2 px-4 border-b">
+                  Style options for the button. see the Options table for more.
+                </td>
+                <td className="py-2 px-4 border-b">false</td>
+              </tr>
+
+              <tr>
+                <td className="py-2 px-4 border-b">
+                  <code>...props</code>
+                </td>
+                <td className="py-2 px-4 border-b">
+                  <code>any</code>
+                </td>
+                <td className="py-2 px-4 border-b">
+                  Supports all standard React Button element props such as onClick,
+                  disabled, etc.
+                </td>
+                <td className="py-2 px-4 border-b">
+                  <code>false</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </Flex>
+
+        <Flex options={{ direction: FlexDir.Col }} className="gap-4 mb-9">
+          <Flex options={{ justify: FlexTypes.Start }} className="w-full">
+            <h2 className="text-2xl font-bold">Options</h2>
+          </Flex>
+          <table>
+            <thead className="bg-zinc-700">
+              <tr>
+                <th className="py-2 px-4 text-left font-semibold border-b">Prop</th>
+                <th className="py-2 px-4 text-left font-semibold  border-b">Type</th>
+                <th className="py-2 px-4 text-left font-semibold border-b">
+                  Description
+                </th>
+                <th className="py-2 px-4 text-left font-semibold border-b">Required</th>
+                <th className="py-2 px-4 text-left font-semibold border-b">Default</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="py-2 px-4 border-b">
+                  <code>bgVariant</code>
                 </td>
                 <td className="py-2 px-4 border-b">
                   <code>Variants | string</code>
                 </td>
                 <td className="py-2 px-4 border-b">
-                  Predefined border color variant (e.g.,{" "}
-                  <code>"cyan" | Variants.Cyan</code>
-                  ).{" "}
+                  Predefined background color variant (e.g.,{" "}
+                  <code>"success" | Variants.Success</code>
+                  ).
+                </td>
+                <td className="py-2 px-4 border-b">
+                  <code>false</code>
+                </td>
+                <td className="py-2 px-4 border-b">
+                  <code>"info"</code>
+                </td>
+              </tr>
+              <tr>
+                <td className="py-2 px-4 border-b">
+                  <code>TextVariant</code>
+                </td>
+                <td className="py-2 px-4 border-b">
+                  <code>Variants | string</code>
+                </td>
+                <td className="py-2 px-4 border-b">
+                  Predefined text color variant (e.g.,{" "}
+                  <code>"white-l" | Variants.WhiteLight</code>
+                  ).
+                </td>
+                <td className="py-2 px-4 border-b">
+                  <code>false</code>
+                </td>
+                <td className="py-2 px-4 border-b">
+                  <code>"black-d"</code>
                 </td>
               </tr>
               <tr>
@@ -118,8 +192,14 @@ const ButtonPage = () => {
                   <code>Sizes | string</code>
                 </td>
                 <td className="py-2 px-4 border-b">
-                  Predefined border color size (e.g., <code>"lg" | Sizes.Lg</code>
+                  Predefined button size (e.g., <code>"lg" | Sizes.Lg</code>
                   ).{" "}
+                </td>
+                <td className="py-2 px-4 border-b">
+                  <code>false</code>
+                </td>
+                <td className="py-2 px-4 border-b">
+                  <code>"md"</code>
                 </td>
               </tr>
               <tr>
@@ -132,6 +212,12 @@ const ButtonPage = () => {
                 <td className="py-2 px-4 border-b">
                   If false, the button's corners won't be round.
                 </td>
+                <td className="py-2 px-4 border-b">
+                  <code>false</code>
+                </td>
+                <td className="py-2 px-4 border-b">
+                  <code>"rounded"</code>
+                </td>
               </tr>
               <tr>
                 <td className="py-2 px-4 border-b">
@@ -142,6 +228,12 @@ const ButtonPage = () => {
                 </td>
                 <td className="py-2 px-4 border-b">
                   If true, the button's <strong>End </strong>corners won't be round.
+                </td>
+                <td className="py-2 px-4 border-b">
+                  <code>false</code>
+                </td>
+                <td className="py-2 px-4 border-b">
+                  <code>"rounded"</code>
                 </td>
               </tr>
               <tr>
@@ -154,17 +246,11 @@ const ButtonPage = () => {
                 <td className="py-2 px-4 border-b">
                   If true, the button's <strong>Start </strong>corners won't be round.
                 </td>
-              </tr>
-              <tr>
                 <td className="py-2 px-4 border-b">
-                  <code>...props</code>
+                  <code>false</code>
                 </td>
                 <td className="py-2 px-4 border-b">
-                  <code>any</code>
-                </td>
-                <td className="py-2 px-4 border-b">
-                  Supports all standard React Button element props such as onClick,
-                  disabled, etc.
+                  <code>"rounded"</code>
                 </td>
               </tr>
             </tbody>

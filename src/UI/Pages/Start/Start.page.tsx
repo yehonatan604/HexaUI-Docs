@@ -2,6 +2,7 @@ import { Button, Flex, List, RainbowBorder } from "react-hexa-dev/components";
 import { FlexDir, FlexTypes, ListStyleTypes, Sizes } from "react-hexa-dev/constants";
 import { installEx, buttonEx, styleEx } from "../../../Data/Constants/CodeExamples/Start";
 import HighLighter from "../../Components/Common/HighLighter/Component";
+import { Link } from "react-router-dom";
 
 const Start = () => {
   return (
@@ -130,7 +131,11 @@ const Start = () => {
       </div>
 
       <div className="pb-9">
-        <Button options={{ size: Sizes.Lg }}>Explore Components</Button>
+        <Link to={"/components"}>
+          <Button options={{ size: Sizes.Lg, bgVariant: "success-d" }}>
+            Explore Components
+          </Button>
+        </Link>
       </div>
     </Flex>
   );

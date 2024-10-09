@@ -15,7 +15,7 @@ const AccordionPage = () => {
           justify: FlexTypes.Start,
           align: FlexTypes.Center,
         }}
-        className={`pb-1 gap-y-9 mx-auto w-3/5`}
+        className={`pb-1 gap-y-9 mx-auto w-4/5`}
       >
         <h2 className="text-4xl font-extrabold font-serif mt-10">Accordion</h2>
 

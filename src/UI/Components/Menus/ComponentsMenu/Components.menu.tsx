@@ -1,4 +1,10 @@
-import { Sidebar, Hr } from "react-hexa-dev/components";
+import { Sidebar } from "react-hexa-dev/components";
+import { FlexTypes } from "react-hexa-dev/constants";
+import { useTheme } from "react-hexa-dev/hooks";
+import { SidebarOptions } from "react-hexa-dev/src/Data/Types/ComponentTypes/Navigation/Sidebar/TSidebar";
+import { SidebarHeaderOptions } from "react-hexa-dev/src/Data/Types/ComponentTypes/Navigation/Sidebar/TSidebarHeader";
+import { SidebarItemOptions } from "react-hexa-dev/src/Data/Types/ComponentTypes/Navigation/Sidebar/TSidebarItem";
+import { TBorder } from "react-hexa-dev/src/Data/Types/TBorder";
 import { BiBorderRadius } from "react-icons/bi";
 import { BsBorderAll } from "react-icons/bs";
 import { CgCardClubs } from "react-icons/cg";
@@ -16,44 +22,195 @@ import { TbLayoutBottombarFilled, TbLayoutNavbarFilled } from "react-icons/tb";
 import { Link } from "react-router-dom";
 
 const ComponentsMenu = () => {
+  const { colors } = useTheme();
+  const borderOptions = {
+    variant: colors.standradDark,
+    thickness: "2",
+  } as TBorder;
+
+  // Sidebar  Options
+  const options = {
+    bgVariant: "zinc-900",
+    border: borderOptions,
+    disableClose: true,
+  } as SidebarOptions;
+
+  const itemOptions = {
+    textVariant: colors.white,
+  } as SidebarItemOptions;
+
+  const headerOptions = {
+    bgVariant: "zinc-800",
+    textVariant: colors.infoLight,
+    placement: FlexTypes.Center,
+  } as SidebarHeaderOptions;
+
+  const common = {
+    accordion: {
+      icon: <GiAccordion />,
+      title: "Accordion",
+      link: "/components/accordion",
+    },
+    button: {
+      icon: <RxButton />,
+      title: "Button",
+      link: "/components/button",
+    },
+    card: {
+      icon: <CgCardClubs />,
+      title: "Card",
+      link: "/components/card",
+    },
+    rainbowBorder: {
+      icon: <BiBorderRadius />,
+      title: "Rainbow Border",
+      link: "/components/rainbow-border",
+    },
+    ring: {
+      icon: <PiFrameCorners />,
+      title: "Ring",
+      link: "/components/ring",
+    },
+    themeToggler: {
+      icon: <LuSun />,
+      title: "Theme Toggler",
+      link: "/components/theme-toggler",
+    },
+  };
+
+  const layout = {
+    flex: {
+      icon: <Gi3dMeeple />,
+      title: "Flex",
+      link: "/components/flex",
+    },
+    grid: {
+      icon: <BsBorderAll />,
+      title: "Grid",
+      link: "/components/grid",
+    },
+  };
+
+  const typography = {
+    hr: {
+      icon: <MdOutlineHorizontalRule />,
+      title: "Hr",
+      link: "/components/hr",
+    },
+    list: {
+      icon: <PiListDashes />,
+      title: "List",
+      link: "/components/list",
+    },
+    quote: {
+      icon: <IoMdQuote />,
+      title: "Quote",
+      link: "/components/quote",
+    },
+    title: {
+      icon: <FaFont />,
+      title: "Title",
+      link: "/components/title",
+    },
+  };
+
+  const form = {
+    checkbox: {
+      icon: <IoIosCheckboxOutline />,
+      title: "Checkbox",
+      link: "/components/checkbox",
+    },
+    colorPicker: {
+      icon: <IoIosColorPalette />,
+      title: "ColorPicker",
+      link: "/components/color-picker",
+    },
+    label: {
+      icon: <MdOutlineTextFields />,
+      title: "Label",
+      link: "/components/label",
+    },
+    rangeInput: {
+      icon: <CiSliderHorizontal />,
+      title: "RangeInput",
+      link: "/components/range-input",
+    },
+    select: {
+      icon: <GoSingleSelect />,
+      title: "Select",
+      link: "/components/select",
+    },
+    textInput: {
+      icon: <RiInputMethodLine />,
+      title: "TextInput",
+      link: "/components/text-input",
+    },
+  };
+
+  const navigation = {
+    footer: {
+      icon: <TbLayoutBottombarFilled />,
+      title: "Footer",
+      link: "/components/footer",
+    },
+    navbar: {
+      icon: <TbLayoutNavbarFilled />,
+      title: "Navbar",
+      link: "/components/navbar",
+    },
+    sidebar: {
+      icon: <PiSidebar />,
+      title: "Sidebar",
+      link: "/components/sidebar",
+    },
+  };
+
   return (
-    <Sidebar>
-      <h1 className="text-2xl mt-4 mx-auto font-serif">Common</h1>
-      <Sidebar.Item icon={<GiAccordion />}>
-        <Link to="/components/accordion">Accordion</Link>
-      </Sidebar.Item>
-      <Sidebar.Item icon={<RxButton />}>
-        <Link to="/components/button">Button</Link>
-      </Sidebar.Item>
-      <Sidebar.Item icon={<CgCardClubs />}>Card</Sidebar.Item>
-      <Sidebar.Item icon={<BiBorderRadius />}>RainbowBorder</Sidebar.Item>
-      <Sidebar.Item icon={<PiFrameCorners />}>Ring</Sidebar.Item>
-      <Sidebar.Item label="new!" icon={<LuSun />}>
-        ThemeToggler
-      </Sidebar.Item>
-      <Hr options={{ border: { thickness: "w-5/6" } }} />
-      <h1 className="text-2xl mx-auto font-serif">Forms</h1>
-      <Sidebar.Item icon={<IoIosCheckboxOutline />}>Checkbox</Sidebar.Item>
-      <Sidebar.Item icon={<IoIosColorPalette />}>ColorPicker</Sidebar.Item>
-      <Sidebar.Item icon={<MdOutlineTextFields />}>Label</Sidebar.Item>
-      <Sidebar.Item icon={<CiSliderHorizontal />}>RangeInput</Sidebar.Item>
-      <Sidebar.Item icon={<GoSingleSelect />}>Select</Sidebar.Item>
-      <Sidebar.Item icon={<RiInputMethodLine />}>TextInput</Sidebar.Item>
-      <Hr options={{ border: { thickness: "w-5/6" } }} />
-      <h1 className="text-2xl mx-auto font-serif">Layout</h1>
-      <Sidebar.Item icon={<Gi3dMeeple />}>Flex</Sidebar.Item>
-      <Sidebar.Item icon={<BsBorderAll />}>Grid</Sidebar.Item>
-      <Hr options={{ border: { thickness: "w-5/6" } }} />
-      <h1 className="text-2xl mx-auto font-serif">Navigation</h1>
-      <Sidebar.Item icon={<TbLayoutBottombarFilled />}>Footer</Sidebar.Item>
-      <Sidebar.Item icon={<TbLayoutNavbarFilled />}>Navbar</Sidebar.Item>
-      <Sidebar.Item icon={<PiSidebar />}>Sidebar</Sidebar.Item>
-      <Hr options={{ border: { thickness: "w-5/6" } }} />
-      <h1 className="text-2xl mx-auto font-serif">Typography</h1>
-      <Sidebar.Item icon={<MdOutlineHorizontalRule />}>Hr</Sidebar.Item>
-      <Sidebar.Item icon={<PiListDashes />}>List</Sidebar.Item>
-      <Sidebar.Item icon={<IoMdQuote />}>Quote</Sidebar.Item>
-      <Sidebar.Item icon={<FaFont />}>Title</Sidebar.Item>
+    <Sidebar options={options}>
+      <Sidebar.Header options={headerOptions}>
+        <h1 className="text-xl font-serif">Common</h1>
+      </Sidebar.Header>
+      {Object.keys(common).map((key) => (
+        <Sidebar.Item options={itemOptions} icon={common[key].icon} key={key}>
+          <Link to={(common[key].link as string).toLowerCase()}>{common[key].title}</Link>
+        </Sidebar.Item>
+      ))}
+      <Sidebar.Header options={headerOptions}>
+        <h1 className="text-xl font-serif">Forms</h1>
+      </Sidebar.Header>
+      {Object.keys(form).map((key) => (
+        <Sidebar.Item options={itemOptions} icon={form[key].icon} key={key}>
+          <Link to={(form[key].link as string).toLowerCase()}>{form[key].title}</Link>
+        </Sidebar.Item>
+      ))}
+      <Sidebar.Header options={headerOptions}>
+        <h1 className="text-xl font-serif">Layout</h1>
+      </Sidebar.Header>
+      {Object.keys(layout).map((key) => (
+        <Sidebar.Item options={itemOptions} icon={layout[key].icon} key={key}>
+          <Link to={(layout[key].link as string).toLowerCase()}>{layout[key].title}</Link>
+        </Sidebar.Item>
+      ))}
+      <Sidebar.Header options={headerOptions}>
+        <h1 className="text-xl font-serif">Navigation</h1>
+      </Sidebar.Header>
+      {Object.keys(navigation).map((key) => (
+        <Sidebar.Item options={itemOptions} icon={navigation[key].icon} key={key}>
+          <Link to={(navigation[key].link as string).toLowerCase()}>
+            {navigation[key].title}
+          </Link>
+        </Sidebar.Item>
+      ))}
+      <Sidebar.Header options={headerOptions}>
+        <h1 className="text-xl font-serif">Typography</h1>
+      </Sidebar.Header>
+      {Object.keys(typography).map((key) => (
+        <Sidebar.Item options={itemOptions} icon={typography[key].icon} key={key}>
+          <Link to={(typography[key].link as string).toLowerCase()}>
+            {typography[key].title}
+          </Link>
+        </Sidebar.Item>
+      ))}
     </Sidebar>
   );
 };

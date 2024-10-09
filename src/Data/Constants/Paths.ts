@@ -1,0 +1,6 @@
+export const hexaPath = 'hexa-ui-dev'
+export const componentsPath = hexaPath + '/components'
+export const hooksPath = hexaPath + '/hooks'
+export const helpersPath = hexaPath + '/helpers'
+export const typesPath = hexaPath + '/types'
+export const constantsPath = hexaPath + '/constants'
