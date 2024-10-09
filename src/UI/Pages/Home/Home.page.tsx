@@ -1,6 +1,6 @@
-import { Flex, List, Hr, Quote, Button } from "react-hexa-dev/components";
-import { FlexDir, FlexTypes, Sizes } from "react-hexa-dev/constants";
-import { TCite } from "react-hexa-dev/types";
+import { Flex, List, Hr, Quote, Button } from "react-hexa-dev";
+import { FlexDir, FlexTypes, Sizes } from "react-hexa-dev";
+import { TCite } from "react-hexa-dev";
 import { Link } from "react-router-dom";
 
 const Home = () => {

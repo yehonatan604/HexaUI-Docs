@@ -1,4 +1,4 @@
-import { TComponent } from "react-hexa-dev/types";
+import { TComponent } from "react-hexa-dev";
 import { BiCopy } from "react-icons/bi";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";

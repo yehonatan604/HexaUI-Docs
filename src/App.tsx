@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import Navbar from "./UI/Components/Layout/Navbar/Navbar";
-import { useTheme } from "react-hexa-dev/hooks";
+import { useTheme } from "react-hexa-dev";
 import AppRouter from "./UI/Router/AppRouter";
 
 function App() {

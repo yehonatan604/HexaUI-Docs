@@ -1,5 +1,5 @@
-import { Button, Flex, Hr, RainbowBorder } from "react-hexa-dev/components";
-import { FlexDir, FlexTypes } from "react-hexa-dev/constants";
+import { Button, Flex, Hr, RainbowBorder } from "react-hexa-dev";
+import { FlexDir, FlexTypes } from "react-hexa-dev";
 import HighLighter from "../../../../../../UI/Components/Common/HighLighter/Component";
 import {
   buttonEx1,

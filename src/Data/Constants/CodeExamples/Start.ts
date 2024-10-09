@@ -1,5 +1,5 @@
-const installEx = "npm install rainbow-plus-ui@latest";
-const buttonEx = `import { Button } from 'rainbow-plus-ui/src';
+const installEx = "npm install react-hexa-ui@latest";
+const buttonEx = `import { Button } from 'react-hexa';
 
 function App() {
   return (

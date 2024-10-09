@@ -1,10 +1,10 @@
-import { Sidebar } from "react-hexa-dev/components";
-import { FlexTypes } from "react-hexa-dev/constants";
-import { useTheme } from "react-hexa-dev/hooks";
-import { SidebarOptions } from "react-hexa-dev/src/Data/Types/ComponentTypes/Navigation/Sidebar/TSidebar";
-import { SidebarHeaderOptions } from "react-hexa-dev/src/Data/Types/ComponentTypes/Navigation/Sidebar/TSidebarHeader";
-import { SidebarItemOptions } from "react-hexa-dev/src/Data/Types/ComponentTypes/Navigation/Sidebar/TSidebarItem";
-import { TBorder } from "react-hexa-dev/src/Data/Types/TBorder";
+import { Sidebar } from "react-hexa-dev";
+import { FlexTypes } from "react-hexa-dev";
+import { useTheme } from "react-hexa-dev";
+import { SidebarOptions } from "react-hexa-dev";
+import { SidebarHeaderOptions } from "react-hexa-dev";
+import { SidebarItemOptions } from "react-hexa-dev";
+import { TBorder } from "react-hexa-dev";
 import { BiBorderRadius } from "react-icons/bi";
 import { BsBorderAll } from "react-icons/bs";
 import { CgCardClubs } from "react-icons/cg";

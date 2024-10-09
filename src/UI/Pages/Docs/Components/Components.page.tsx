@@ -1,5 +1,5 @@
-import { Flex, List } from "react-hexa-dev/components";
-import { FlexDir, FlexTypes, Sizes, ListStyleTypes } from "react-hexa-dev/constants";
+import { Flex, List } from "react-hexa-dev";
+import { FlexDir, FlexTypes, Sizes, ListStyleTypes } from "react-hexa-dev";
 
 const Components = () => {
   return (

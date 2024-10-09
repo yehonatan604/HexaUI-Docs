@@ -1,11 +1,11 @@
-import { Accordion, Flex, Hr } from "react-hexa-dev/components";
+import { Accordion, Flex, Hr } from "react-hexa-dev";
 import HighLighter from "../../../../../../UI/Components/Common/HighLighter/Component";
-import { FlexDir, FlexTypes } from "react-hexa-dev/constants";
+import { FlexDir, FlexTypes } from "react-hexa-dev";
 import {
   accordionEx1,
   accordionEx2,
 } from "../../../../../../Data/Constants/CodeExamples/Accordion";
-import { useTheme } from "react-hexa-dev/hooks";
+import { useTheme } from "react-hexa-dev";
 
 const AccordionPage = () => {
   const { colors } = useTheme();

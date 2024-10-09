@@ -1,5 +1,5 @@
-import { Button, Flex, List, RainbowBorder } from "react-hexa-dev/components";
-import { FlexDir, FlexTypes, ListStyleTypes, Sizes } from "react-hexa-dev/constants";
+import { Button, Flex, List, RainbowBorder } from "react-hexa-dev";
+import { FlexDir, FlexTypes, ListStyleTypes, Sizes } from "react-hexa-dev";
 import { installEx, buttonEx, styleEx } from "../../../Data/Constants/CodeExamples/Start";
 import HighLighter from "../../Components/Common/HighLighter/Component";
 import { Link } from "react-router-dom";

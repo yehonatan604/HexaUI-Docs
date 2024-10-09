@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa6";
 import { BiUserCircle } from "react-icons/bi";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
-import { Navbar as RpNavbar, Flex, ThemeToggler } from "react-hexa-dev/components";
-import { FlexTypes } from "react-hexa-dev/constants";
+import { Navbar as RpNavbar, Flex, ThemeToggler } from "react-hexa-dev";
+import { FlexTypes } from "react-hexa-dev";
 
 const Navbar = () => {
   const [isMobileMenuOpen, toggle] = useState(false);

@@ -1,4 +1,4 @@
-import { Flex } from "react-hexa-dev/components";
+import { Flex } from "react-hexa-dev";
 import ComponentsMenu from "../Menus/ComponentsMenu/Components.menu";
 import { Outlet } from "react-router-dom";
 
