@@ -15,10 +15,10 @@ const PageHolder = ({ of }: { of: string }) => {
 
   return (
     <Flex>
-      <div className="h-[93vh] overflow-y-auto bg-zinc-700">
-        <div className="w-[13.4vw]">{menu}</div>
+      <div className="h-[93vh] overflow-y-auto overflow-x-hidden">
+        <div className="w-[17vw]">{menu}</div>
       </div>
-      <div className="max-h-[93vh] h-93vh w-[86vw] overflow-y-scroll">
+      <div className="max-h-[93vh] h-93vh w-full overflow-y-scroll">
         <Outlet />
       </div>
     </Flex>

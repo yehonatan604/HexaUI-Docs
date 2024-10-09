@@ -1,12 +1,15 @@
-import { Accordion, Flex, Hr, RainbowBorder } from "react-hexa-dev/components";
+import { Accordion, Flex, Hr } from "react-hexa-dev/components";
 import HighLighter from "../../../../../../UI/Components/Common/HighLighter/Component";
 import { FlexDir, FlexTypes } from "react-hexa-dev/constants";
 import {
   accordionEx1,
   accordionEx2,
 } from "../../../../../../Data/Constants/CodeExamples/Accordion";
+import { useTheme } from "react-hexa-dev/hooks";
 
 const AccordionPage = () => {
+  const { colors } = useTheme();
+
   return (
     <div className="flex justify-center">
       <Flex
@@ -38,6 +41,8 @@ const AccordionPage = () => {
           <Accordion
             options={{
               title: "Accordion Standard",
+              border: { show: true, variant: "standard" },
+              textVariant: "standard",
             }}
           >
             <p>
@@ -53,19 +58,19 @@ const AccordionPage = () => {
           <h2 className="text-2xl font-bold">Customizing the Border Color</h2>
           <p className="mt-4 mb-8 text-lg ">
             You can easily customize the border color of the Accordion by using either
-            variants (as Variants or as string):
+            variants (as Variants or as string) or Tailwind classes:
           </p>
-          <RainbowBorder className="text-sm ml-4 mt-4">
-            <HighLighter>{accordionEx2}</HighLighter>
-          </RainbowBorder>
+          <HighLighter>{accordionEx2}</HighLighter>
         </div>
 
         {/* Accordion Variants by using string */}
         <div className="w-1/4">
           <Accordion
             options={{
-              title: "Accordion Info",
-              textVariant: "info",
+              title: "Accordion",
+              border: { show: true, variant: colors.primaryDark },
+              textVariant: colors.select,
+              titleVariant: colors.primary,
             }}
           >
             <p>
@@ -81,8 +86,10 @@ const AccordionPage = () => {
         <div className="w-1/4">
           <Accordion
             options={{
-              title: "Accordion Warning",
-              textVariant: "warning",
+              title: "Accordion",
+              border: { show: true, variant: "zinc-300" },
+              textVariant: "sky-500",
+              titleVariant: "sky-300",
             }}
           >
             <p>

@@ -42,7 +42,7 @@ const ComponentsMenu = () => {
   const headerOptions = {
     bgVariant: "zinc-800",
     textVariant: colors.infoLight,
-    placement: FlexTypes.Center,
+    placement: FlexTypes.Start,
   } as SidebarHeaderOptions;
 
   const common = {
@@ -166,9 +166,14 @@ const ComponentsMenu = () => {
   };
 
   return (
-    <Sidebar options={options}>
+    <Sidebar
+      options={options}
+      style={{
+        width: "17vw",
+      }}
+    >
       <Sidebar.Header options={headerOptions}>
-        <h1 className="text-xl font-serif">Common</h1>
+        <h1 className="text-xl font-serif ml-5">Common</h1>
       </Sidebar.Header>
       {Object.keys(common).map((key) => (
         <Sidebar.Item options={itemOptions} icon={common[key].icon} key={key}>
@@ -176,7 +181,7 @@ const ComponentsMenu = () => {
         </Sidebar.Item>
       ))}
       <Sidebar.Header options={headerOptions}>
-        <h1 className="text-xl font-serif">Forms</h1>
+        <h1 className="text-xl font-serif ml-5">Forms</h1>
       </Sidebar.Header>
       {Object.keys(form).map((key) => (
         <Sidebar.Item options={itemOptions} icon={form[key].icon} key={key}>
@@ -184,7 +189,7 @@ const ComponentsMenu = () => {
         </Sidebar.Item>
       ))}
       <Sidebar.Header options={headerOptions}>
-        <h1 className="text-xl font-serif">Layout</h1>
+        <h1 className="text-xl font-serif ml-5">Layout</h1>
       </Sidebar.Header>
       {Object.keys(layout).map((key) => (
         <Sidebar.Item options={itemOptions} icon={layout[key].icon} key={key}>
@@ -192,7 +197,7 @@ const ComponentsMenu = () => {
         </Sidebar.Item>
       ))}
       <Sidebar.Header options={headerOptions}>
-        <h1 className="text-xl font-serif">Navigation</h1>
+        <h1 className="text-xl font-serif ml-5">Navigation</h1>
       </Sidebar.Header>
       {Object.keys(navigation).map((key) => (
         <Sidebar.Item options={itemOptions} icon={navigation[key].icon} key={key}>
@@ -202,7 +207,7 @@ const ComponentsMenu = () => {
         </Sidebar.Item>
       ))}
       <Sidebar.Header options={headerOptions}>
-        <h1 className="text-xl font-serif">Typography</h1>
+        <h1 className="text-xl font-serif ml-5">Typography</h1>
       </Sidebar.Header>
       {Object.keys(typography).map((key) => (
         <Sidebar.Item options={itemOptions} icon={typography[key].icon} key={key}>
