@@ -23,7 +23,7 @@ const Navbar = () => {
           <RpNavbar.Link to="/Hooks">Hooks</RpNavbar.Link>
           <RpNavbar.Link to="/Helpers">Helpers</RpNavbar.Link>
           <RpNavbar.Link to="/Types">Types</RpNavbar.Link>
-          <RpNavbar.Link to="/download">Download</RpNavbar.Link>
+          <RpNavbar.Link to="/download">Themes</RpNavbar.Link>
         </RpNavbar.Collapse>
         <RpNavbar.Brand>
           <Flex options={{ align: FlexTypes.Center }} className="gap-4">
