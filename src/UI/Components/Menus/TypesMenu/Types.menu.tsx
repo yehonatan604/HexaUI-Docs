@@ -5,15 +5,17 @@ import { SidebarOptions } from "react-hexa-dev";
 import { SidebarHeaderOptions } from "react-hexa-dev";
 import { SidebarItemOptions } from "react-hexa-dev";
 import { TBorder } from "react-hexa-dev";
-import { BsStars, BsWindowFullscreen } from "react-icons/bs";
-import { CgScrollV } from "react-icons/cg";
-import { GrStorage } from "react-icons/gr";
-import { IoColorPaletteOutline, IoPlayForwardOutline } from "react-icons/io5";
-import { LiaSyncAltSolid } from "react-icons/lia";
-import { LuClipboardPaste, LuFormInput } from "react-icons/lu";
-import { MdOutlineInsertPageBreak } from "react-icons/md";
-import { PiFlyingSaucerLight } from "react-icons/pi";
-import { TbFileOrientation, TbTypography } from "react-icons/tb";
+import { CgDisplayFlex, CgDisplaySpacing } from "react-icons/cg";
+import { CiDatabase } from "react-icons/ci";
+import { FiLayout } from "react-icons/fi";
+import { GrValidate } from "react-icons/gr";
+import { HiOutlineColorSwatch } from "react-icons/hi";
+import { IoNavigate } from "react-icons/io5";
+import { LuComponent } from "react-icons/lu";
+import { MdInvertColors, MdOutlineColorize, MdOutlineColorLens } from "react-icons/md";
+import { PiResize, PiShareDuotone } from "react-icons/pi";
+import { RxColorWheel } from "react-icons/rx";
+import { TbForms, TbTypography } from "react-icons/tb";
 import { Link } from "react-router-dom";
 
 const TypesMenu = () => {
@@ -41,80 +43,95 @@ const TypesMenu = () => {
   } as SidebarHeaderOptions;
 
   // Sidebar Items
-  const themeManagement = {
-    useTheme: {
-      icon: <IoColorPaletteOutline />,
-      title: "useTheme",
-      link: "/hooks/useTheme",
+  const component = {
+    main: {
+      icon: <LuComponent />,
+      title: "Component Types",
+      link: "/types/main",
     },
-    useTypography: {
+    common: {
+      icon: <PiShareDuotone />,
+      title: "Common",
+      link: "/types/common",
+    },
+    forms: {
+      icon: <TbForms />,
+      title: "Forms",
+      link: "/types/forms",
+    },
+    layout: {
+      icon: <FiLayout />,
+      title: "Layout",
+      link: "/types/layout",
+    },
+    navigation: {
+      icon: <IoNavigate />,
+      title: "Navigation",
+      link: "/types/navigation",
+    },
+    Typography: {
       icon: <TbTypography />,
-      title: "useTypography",
-      link: "/hooks/useTypography",
+      title: "Typography",
+      link: "/types/Typography",
     },
   };
 
-  const animation = {
-    useConfeti: {
-      icon: <BsStars />,
-      title: "useConfeti",
-      link: "/hooks/useConfeti",
+  const forms = {
+    data: {
+      icon: <CiDatabase />,
+      title: "Data",
+      link: "/types/data",
     },
-    useAnimation: {
-      icon: <IoPlayForwardOutline />,
-      title: "useAnimation",
-      link: "/hooks/useAnimation",
-    },
-    useTransition: {
-      icon: <PiFlyingSaucerLight />,
-      title: "useHoverAnimation",
-      link: "/hooks/useHoverAnimation",
-    },
-    useScrollReveal: {
-      icon: <CgScrollV />,
-      title: "useScrollReveal",
-      link: "/hooks/useScrollReveal",
+    validations: {
+      icon: <GrValidate />,
+      title: "Validation Types",
+      link: "/types/validations",
     },
   };
 
-  const window = {
-    useWindow: {
-      icon: <BsWindowFullscreen />,
-      title: "useWindow",
-      link: "/hooks/useWindow",
+  const layout = {
+    flexTypes: {
+      icon: <CgDisplayFlex />,
+      title: "Flex Types",
+      link: "/types/FlexTypes",
     },
-    useMediaQuery: {
-      icon: <TbFileOrientation />,
-      title: "useMediaQuery",
-      link: "/hooks/useMediaQuery",
+    sizes: {
+      icon: <PiResize />,
+      title: "Sizes",
+      link: "/types/Sizes",
     },
-    useStorage: {
-      icon: <GrStorage />,
-      title: "useStorage",
-      link: "/hooks/useStorage",
-    },
-    useClipboard: {
-      icon: <LuClipboardPaste />,
-      title: "useClipboard",
-      link: "/hooks/useClipboard",
+    spacing: {
+      icon: <CgDisplaySpacing />,
+      title: "Spacing",
+      link: "/types/Spacing",
     },
   };
 
-  const dataManagement = {
-    usePagination: {
-      icon: <MdOutlineInsertPageBreak />,
-      title: "usePagination ",
-      link: "/hooks/usePagination ",
+  const styling = {
+    colors: {
+      icon: <MdInvertColors />,
+      title: "Colors ",
+      link: "/hooks/colors ",
     },
-    useForm: {
-      icon: <LuFormInput />,
-      title: "useForm",
-      link: "/hooks/useForm",
+    gradients: {
+      icon: <HiOutlineColorSwatch />,
+      title: "Gradients",
+      link: "/types/gradients",
     },
-    label: {
-      icon: <LiaSyncAltSolid />,
-      title: "useAsync",
-      link: "/hooks/useAsync",
+    TColor: {
+      icon: <MdOutlineColorize />,
+      title: "TColor",
+      link: "/types/TColor",
+    },
+    TColorPalette: {
+      icon: <MdOutlineColorLens />,
+      title: "TColorPalette ",
+      link: "/types/TColorPalette ",
+    },
+    TGradientPalette: {
+      icon: <RxColorWheel />,
+      title: "TGradientPalette",
+      link: "/types/TGradientPalette",
     },
   };
 
@@ -126,41 +143,39 @@ const TypesMenu = () => {
       }}
     >
       <Sidebar.Header options={headerOptions}>
-        <h1 className="text-xl font-serif ml-5">Animations</h1>
+        <h1 className="text-xl font-serif ml-5">Component Types</h1>
       </Sidebar.Header>
-      {Object.keys(animation).map((key) => (
-        <Sidebar.Item options={itemOptions} icon={animation[key].icon} key={key}>
-          <Link to={(animation[key].link as string).toLowerCase()}>
-            {animation[key].title}
+      {Object.keys(component).map((key) => (
+        <Sidebar.Item options={itemOptions} icon={component[key].icon} key={key}>
+          <Link to={(component[key].link as string).toLowerCase()}>
+            {component[key].title}
           </Link>
         </Sidebar.Item>
       ))}
       <Sidebar.Header options={headerOptions}>
-        <h1 className="text-xl font-serif ml-5">Data</h1>
+        <h1 className="text-xl font-serif ml-5">Themes Types</h1>
       </Sidebar.Header>
-      {Object.keys(dataManagement).map((key) => (
-        <Sidebar.Item options={itemOptions} icon={dataManagement[key].icon} key={key}>
-          <Link to={(dataManagement[key].link as string).toLowerCase()}>
-            {dataManagement[key].title}
+      {Object.keys(styling).map((key) => (
+        <Sidebar.Item options={itemOptions} icon={styling[key].icon} key={key}>
+          <Link to={(styling[key].link as string).toLowerCase()}>
+            {styling[key].title}
           </Link>
         </Sidebar.Item>
       ))}
       <Sidebar.Header options={headerOptions}>
-        <h1 className="text-xl font-serif ml-5">Themes</h1>
+        <h1 className="text-xl font-serif ml-5">Form & Input Types</h1>
       </Sidebar.Header>
-      {Object.keys(themeManagement).map((key) => (
-        <Sidebar.Item options={itemOptions} icon={themeManagement[key].icon} key={key}>
-          <Link to={(themeManagement[key].link as string).toLowerCase()}>
-            {themeManagement[key].title}
-          </Link>
+      {Object.keys(forms).map((key) => (
+        <Sidebar.Item options={itemOptions} icon={forms[key].icon} key={key}>
+          <Link to={(forms[key].link as string).toLowerCase()}>{forms[key].title}</Link>
         </Sidebar.Item>
       ))}
       <Sidebar.Header options={headerOptions}>
-        <h1 className="text-xl font-serif ml-5">Window & Browser</h1>
+        <h1 className="text-xl font-serif ml-5">Layout & Positioning Types</h1>
       </Sidebar.Header>
-      {Object.keys(window).map((key) => (
-        <Sidebar.Item options={itemOptions} icon={window[key].icon} key={key}>
-          <Link to={(window[key].link as string).toLowerCase()}>{window[key].title}</Link>
+      {Object.keys(layout).map((key) => (
+        <Sidebar.Item options={itemOptions} icon={layout[key].icon} key={key}>
+          <Link to={(layout[key].link as string).toLowerCase()}>{layout[key].title}</Link>
         </Sidebar.Item>
       ))}
     </Sidebar>

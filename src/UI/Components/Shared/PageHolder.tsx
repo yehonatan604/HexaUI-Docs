@@ -3,6 +3,7 @@ import ComponentsMenu from "../Menus/ComponentsMenu/Components.menu";
 import { Outlet } from "react-router-dom";
 import HooksMenu from "../Menus/HooksMenu/Hooks.menu";
 import HelpersMenu from "../Menus/HelpersMenu/Helpers.menu";
+import TypesMenu from "../Menus/TypesMenu/Types.menu";
 
 const PageHolder = ({ of }: { of: string }) => {
   let menu: JSX.Element;
@@ -15,6 +16,9 @@ const PageHolder = ({ of }: { of: string }) => {
       break;
     case "helpers":
       menu = <HelpersMenu />;
+      break;
+    case "types":
+      menu = <TypesMenu />;
       break;
   }
 

@@ -8,6 +8,7 @@ import PageHolder from "../Components/Shared/PageHolder";
 import Hooks from "../Pages/Docs/Hooks/Hooks.page";
 import Helpers from "../Pages/Docs/Helpers/Helpers.page";
 import Types from "../Pages/Docs/Types/Types.page";
+import Themes from "../Pages/Themes/Themes.page";
 
 const AppRouter = () => {
   return (
@@ -34,6 +35,7 @@ const AppRouter = () => {
         </Route>
 
         <Route path="/start" element={<Start />} />
+        <Route path="/themes" element={<Themes />} />
         <Route path="/*" element={<Home />} />
       </Routes>
     </>

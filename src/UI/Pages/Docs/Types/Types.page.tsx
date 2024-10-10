@@ -14,10 +14,10 @@ const Types = () => {
       >
         <h2 className="text-4xl font-extrabold font-serif mt-10">Types Overview</h2>
         <p className="mt-4 text-lg max-md:p-10">
-          This section provides a growing collection of reusable and customizable React
-          hooks designed to streamline your development process. Each hook is crafted with
-          flexibility in mind, allowing you to integrate it easily into different
-          scenarios while maintaining a consistent codebase.
+          This section provides a comprehensive collection of reusable and customizable
+          types designed to streamline your development process. Each type is crafted to
+          provide consistency and scalability for different aspects of your application
+          while maintaining a clear and structured codebase.
         </p>
         <Flex
           options={{
@@ -27,7 +27,7 @@ const Types = () => {
           className="gap-9"
         >
           <p className="mt-4 text-xl font-bold max-md:p-10">
-            Use the sidebar to navigate through the various categories of hooks:
+            Use the sidebar to navigate through the various categories of types:
           </p>
 
           <List
@@ -35,21 +35,26 @@ const Types = () => {
               listStyle: ListStyleTypes.Disc,
               items: [
                 <div className="text-left gap-2">
-                  <strong>Theme Management: </strong> Hooks that provides utilities for
-                  managing themes, including toggling between light and dark modes,
-                  customizing colors, and more.
+                  <strong>Component Types: </strong> Types that are used across multiple
+                  components, providing consistency in props and customization options.
                 </div>,
                 <div className="text-left gap-2">
-                  <strong>Animation & Effects: </strong> Hooks that provide animations or
-                  visual effects, adding an engaging layer to your UI.
+                  <strong>Form & Input Types: </strong> Types that help define props for
+                  forms, inputs, validation rules, and more, ensuring form consistency.
                 </div>,
                 <div className="text-left gap-2">
-                  <strong>Window & Browser Utilities: </strong> Hooks that help you manage
-                  window dimensions or handle browser-specific events effectively.
+                  <strong>Layout & Positioning Types: </strong> Types that deal with
+                  layout properties like alignment, direction, spacing, and other
+                  utilities for positioning elements.
                 </div>,
                 <div className="text-left gap-2">
-                  <strong>Data Management: </strong> Hooks that make data handling,
-                  pagination, and state management simpler and more maintainable.
+                  <strong>Styling Types: </strong> Types that manage styles such as
+                  colors, gradients, themes, and other visual aspects of the application.
+                </div>,
+                <div className="text-left gap-2">
+                  <strong>Miscellaneous Types: </strong> Types that don't fit into a
+                  specific category, such as utility types like `TComponent`,
+                  `TComponentOptions`, `TColor`, and others.
                 </div>,
               ],
               fontSize: Sizes.Lg,
