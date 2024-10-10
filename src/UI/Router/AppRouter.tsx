@@ -6,6 +6,8 @@ import AccordionPage from "../Pages/Docs/Components/Common/Accordion/Accordion.p
 import ButtonPage from "../Pages/Docs/Components/Common/Button/Button.Page";
 import PageHolder from "../Components/Shared/PageHolder";
 import Hooks from "../Pages/Docs/Hooks/Hooks.page";
+import Helpers from "../Pages/Docs/Helpers/Helpers.page";
+import Types from "../Pages/Docs/Types/Types.page";
 
 const AppRouter = () => {
   return (
@@ -21,6 +23,14 @@ const AppRouter = () => {
 
         <Route path="/hooks" element={<PageHolder of="hooks" />}>
           <Route index element={<Hooks />} />
+        </Route>
+
+        <Route path="/helpers" element={<PageHolder of="helpers" />}>
+          <Route index element={<Helpers />} />
+        </Route>
+
+        <Route path="/types" element={<PageHolder of="types" />}>
+          <Route index element={<Types />} />
         </Route>
 
         <Route path="/start" element={<Start />} />

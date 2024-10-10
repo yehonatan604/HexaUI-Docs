@@ -2,6 +2,7 @@ import { Flex } from "react-hexa-dev";
 import ComponentsMenu from "../Menus/ComponentsMenu/Components.menu";
 import { Outlet } from "react-router-dom";
 import HooksMenu from "../Menus/HooksMenu/Hooks.menu";
+import HelpersMenu from "../Menus/HelpersMenu/Helpers.menu";
 
 const PageHolder = ({ of }: { of: string }) => {
   let menu: JSX.Element;
@@ -12,8 +13,8 @@ const PageHolder = ({ of }: { of: string }) => {
     case "hooks":
       menu = <HooksMenu />;
       break;
-    default:
-      menu = <ComponentsMenu />;
+    case "helpers":
+      menu = <HelpersMenu />;
       break;
   }
 
