@@ -4,7 +4,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const HighLighter = (props: TComponent<"div">) => {
-  const { children, ...componentProps } = props;
+  const { children, lang, ...componentProps } = props;
 
   const customHighlighterStyle = {
     backgroundColor: "#1a202c",
@@ -25,7 +25,7 @@ const HighLighter = (props: TComponent<"div">) => {
         <SyntaxHighlighter
           style={dark}
           customStyle={customHighlighterStyle}
-          language="js"
+          language={lang || "tsx"}
         >
           {children as string}
         </SyntaxHighlighter>

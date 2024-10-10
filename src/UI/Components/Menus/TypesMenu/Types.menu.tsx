@@ -46,7 +46,7 @@ const TypesMenu = () => {
   const component = {
     main: {
       icon: <LuComponent />,
-      title: "Component Types",
+      title: "Component Main Types",
       link: "/types/main",
     },
     common: {
