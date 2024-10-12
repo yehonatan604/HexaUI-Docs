@@ -1,5 +1,5 @@
 import { Flex, Button, useTheme } from "react-hexa-dev";
-import HighLighter from "../../Components/Common/HighLighter/Component";
+import HighLighter from "../../Components/Shared/HighLighter";
 
 const Themes = () => {
   const { mode, toggleTheme, colors, gradients } = useTheme();

@@ -1,12 +1,12 @@
 import { Flex } from "react-hexa-dev";
-import HighLighter from "../../../../Components/Common/HighLighter/Component";
+import HighLighter from "../../../../Components/Shared/HighLighter";
 import {
   componentEx1,
   componentEx2,
   componentEx3,
   componentEx4,
 } from "../../../../../Data/Constants/CodeExamples/ComponentTypes";
-//test
+
 const Main = () => {
   return (
     <Flex options={{ justify: "center" }}>

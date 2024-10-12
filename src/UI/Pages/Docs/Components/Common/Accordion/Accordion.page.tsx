@@ -1,11 +1,10 @@
 import { Accordion, Flex, Hr } from "react-hexa-dev";
-import HighLighter from "../../../../../../UI/Components/Common/HighLighter/Component";
+import HighLighter from "../../../../../Components/Shared/HighLighter";
 import { FlexDir, FlexTypes } from "react-hexa-dev";
-import {
-  accordionEx1,
-  accordionEx2,
-} from "../../../../../../Data/Constants/CodeExamples/Accordion";
+import { accordionEx1, accordionEx2 } from "./Accordion.code";
 import { useTheme } from "react-hexa-dev";
+import { props, options } from "./Accordion.props";
+import PropsTable from "../../../../../Components/Shared/PropsTable";
 
 const AccordionPage = () => {
   const { colors } = useTheme();
@@ -103,74 +102,18 @@ const AccordionPage = () => {
 
         <Hr options={{ border: { thickness: "w-1/2" } }} />
 
-        <Flex
-          options={{
-            direction: FlexDir.Col,
-            justify: FlexTypes.Start,
-            align: FlexTypes.Start,
-          }}
-          className="w-3/4 gap-4 mb-9"
-        >
-          <h2 className="text-2xl font-bold">Props</h2>
-          <table>
-            <thead className="bg-zinc-700">
-              <tr>
-                <th className="py-2 px-4 text-left font-semibold border-b">Prop</th>
-                <th className="py-2 px-4 text-left font-semibold  border-b">Type</th>
-                <th className="py-2 px-4 text-left font-semibold border-b">
-                  Description
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="py-2 px-4 border-b">
-                  <code>title</code>
-                </td>
-                <td className="py-2 px-4 border-b">
-                  <code>string</code>
-                </td>
-                <td className="py-2 px-4 border-b">
-                  The title displayed in the accordion header.
-                </td>
-              </tr>
-              <tr>
-                <td className="py-2 px-4 border-b">
-                  <code>variant</code>
-                </td>
-                <td className="py-2 px-4 border-b">
-                  <code>Variants | string</code>
-                </td>
-                <td className="py-2 px-4 border-b">
-                  Predefined border color variant (e.g.,{" "}
-                  <code>"cyan" | Variants.Cyan</code>
-                  ).{" "}
-                </td>
-              </tr>
-              <tr>
-                <td className="py-2 px-4 border-b">
-                  <code>className</code>
-                </td>
-                <td className="py-2 px-4 border-b">
-                  <code>string</code>
-                </td>
-                <td className="py-2 px-4 border-b">
-                  Additional Tailwind CSS classes to override default styles.
-                </td>
-              </tr>
-              <tr>
-                <td className="py-2 px-4 border-b">
-                  <code>style</code>
-                </td>
-                <td className="py-2 px-4 border-b">
-                  <code>string</code>
-                </td>
-                <td className="py-2 px-4 border-b">
-                  Additional CSS to override default styles.
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <Flex options={{ direction: FlexDir.Col }} className="mb-9">
+          <Flex options={{ justify: FlexTypes.Start }} className="w-full">
+            <h2 className="text-2xl font-bold">Props</h2>
+          </Flex>
+          <PropsTable tableProps={props} />
+        </Flex>
+
+        <Flex options={{ direction: FlexDir.Col }} className="gap-4 mb-9">
+          <Flex options={{ justify: FlexTypes.Start }} className="w-full">
+            <h2 className="text-2xl font-bold">Options</h2>
+          </Flex>
+          <PropsTable tableProps={options} />
         </Flex>
       </Flex>
     </div>

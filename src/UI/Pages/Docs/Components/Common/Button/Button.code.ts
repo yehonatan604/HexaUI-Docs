@@ -1,12 +1,12 @@
-import { componentsPath } from "../Paths";
+import { hexaPath } from "../../../../../../Data/Constants/Paths";
 
-const buttonEx1 = `import { Button } from '${componentsPath}';
+const buttonEx1 = `import { Button } from '${hexaPath}';
 
 <>
     <Button>Click Me</Button>
 </>
 `;
-const buttonEx2 = `import { Button, Flex, Sizes } from '${componentsPath}'
+const buttonEx2 = `import { Button, Flex, Sizes } from '${hexaPath}'
 <>
   <Flex classname="gap-4">
       <Button

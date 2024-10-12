@@ -1,6 +1,6 @@
-import { componentsPath, hooksPath } from "../Paths";
+import { hexaPath } from "../../../../../../Data/Constants/Paths";
 
-const accordionEx1 = `import { Accordion } from '${componentsPath}';
+const accordionEx1 = `import { Accordion } from '${hexaPath}';
 
 <>
   <Accordion
@@ -20,8 +20,7 @@ const accordionEx1 = `import { Accordion } from '${componentsPath}';
 </>
 `;
 
-const accordionEx2 = `import { Accordion } from '${componentsPath};
-import { useTheme } from '${hooksPath}';
+const accordionEx2 = `import { Accordion, useTheme } from '${hexaPath};
 const { colors } = useTheme();
 
 function App () {
