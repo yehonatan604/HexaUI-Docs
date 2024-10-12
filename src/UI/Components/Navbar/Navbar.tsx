@@ -5,6 +5,7 @@ import { BiUserCircle } from "react-icons/bi";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { Navbar as RpNavbar, Flex, ThemeToggler } from "react-hexa-dev";
 import { FlexTypes } from "react-hexa-dev";
+import logo from "../../../Assets/Images/logo.png";
 
 const Navbar = () => {
   const [isMobileMenuOpen, toggle] = useState(false);
@@ -13,7 +14,12 @@ const Navbar = () => {
     <header className="sticky top-0 z-50">
       <RpNavbar options={{ bgVariant: "black-d" }}>
         <RpNavbar.Brand as={Link} to="/">
-          Hexa UI
+          <Flex options={{ align: FlexTypes.Center }} className="gap-4">
+            Hexa UI
+            <div className="w-10 h-10 rounded-full p-1 bg-[#1f2326]">
+              <img src={logo} alt="Hexa UI Logo" className="object-cover rounded-full" />
+            </div>
+          </Flex>
         </RpNavbar.Brand>
         <RpNavbar.Toggle toggle={toggle}>
           <FaBars />
