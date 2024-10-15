@@ -15,12 +15,12 @@ const Navbar = () => {
       <RpNavbar options={{ bgVariant: "black-d" }}>
         <RpNavbar.Brand as={Link} to="/">
           <Flex options={{ align: FlexTypes.Center }} className="gap-4">
-            Hexa UI
             <img
               src={logo}
               alt="Hexa UI Logo"
-              className="object-cover size-10 rounded-full"
+              className="object-cover size-8 rounded-full"
             />
+            Hexa UI
           </Flex>
         </RpNavbar.Brand>
         <RpNavbar.Toggle toggle={toggle}>

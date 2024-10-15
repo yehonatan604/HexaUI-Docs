@@ -10,6 +10,7 @@ import Helpers from "../Pages/Docs/Helpers/Helpers.page";
 import Types from "../Pages/Docs/Types/Types.page";
 import Themes from "../Pages/Themes/Themes.page";
 import Main from "../Pages/Docs/Types/ComponentsTypes/Main.page";
+import CardPage from "../Pages/Docs/Components/Common/Card/Card.page";
 
 const AppRouter = () => {
   return (
@@ -21,6 +22,7 @@ const AppRouter = () => {
           <Route index element={<Components />} />
           <Route path="/components/accordion" element={<AccordionPage />} />
           <Route path="/components/button" element={<ButtonPage />} />
+          <Route path="/components/card" element={<CardPage />} />
         </Route>
 
         <Route path="/hooks" element={<PageHolder of="hooks" />}>

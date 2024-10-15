@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Alert, Flex, RainbowBorder, TComponent } from "react-hexa-dev";
+import { Flex, RainbowBorder, TComponent } from "react-hexa-dev";
 import { BiCheck, BiCopy } from "react-icons/bi";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coldarkDark as dark } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -7,7 +7,6 @@ import { coldarkDark as dark } from "react-syntax-highlighter/dist/esm/styles/pr
 const HighLighter = (props: TComponent<"div">) => {
   const { children, lang, className, ...componentProps } = props;
   const [copied, setCopied] = useState(false);
-  const [showSuccessAlert, setShowSuccessAlert] = useState(false);
 
   const customHighlighterStyle = {
     backgroundColor: "#1a202c",
@@ -20,10 +19,9 @@ const HighLighter = (props: TComponent<"div">) => {
   const onCopy = () => {
     navigator.clipboard.writeText(children as string);
     setCopied(true);
-    setShowSuccessAlert(true);
     setTimeout(() => {
       setCopied(false);
-    }, 4000);
+    }, 2000);
   };
 
   return (
@@ -51,14 +49,6 @@ const HighLighter = (props: TComponent<"div">) => {
           {children as string}
         </SyntaxHighlighter>
       </div>
-      <Alert
-        show={showSuccessAlert}
-        setShow={setShowSuccessAlert}
-        options={{ title: "Copy to Clipboard", type: "success" }}
-        dir="ltr"
-      >
-        Operation Successful!
-      </Alert>
     </RainbowBorder>
   );
 };
