@@ -12,7 +12,7 @@ import { CiSliderHorizontal } from "react-icons/ci";
 import { FaFont } from "react-icons/fa6";
 import { Gi3dMeeple, GiAccordion } from "react-icons/gi";
 import { GoSingleSelect } from "react-icons/go";
-import { IoIosCheckboxOutline, IoIosColorPalette, IoMdQuote } from "react-icons/io";
+import { IoIosCheckboxOutline, IoMdQuote } from "react-icons/io";
 import { LuSun } from "react-icons/lu";
 import { MdOutlineHorizontalRule, MdOutlineTextFields } from "react-icons/md";
 import { PiFrameCorners, PiListDashes, PiSidebar } from "react-icons/pi";
@@ -120,11 +120,6 @@ const ComponentsMenu = () => {
       title: "Checkbox",
       link: "/components/checkbox",
     },
-    colorPicker: {
-      icon: <IoIosColorPalette />,
-      title: "ColorPicker",
-      link: "/components/color-picker",
-    },
     label: {
       icon: <MdOutlineTextFields />,
       title: "Label",
@@ -186,7 +181,9 @@ const ComponentsMenu = () => {
         </Sidebar.Item>
       ))}
       <Sidebar.Header options={headerOptions}>
-        <h1 className="text-xl font-serif ml-5">Forms</h1>
+        <Link to="/components/forms" className="text-xl font-serif ml-5 hover:opacity-70">
+          Forms
+        </Link>
       </Sidebar.Header>
       {Object.keys(form).map((key) => (
         <Sidebar.Item options={itemOptions} icon={form[key].icon} key={key}>

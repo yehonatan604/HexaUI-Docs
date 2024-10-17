@@ -16,6 +16,7 @@ import Docs from "../Pages/Docs/Docs.page";
 import RingPage from "../Pages/Docs/Components/Common/Ring/Ring.page";
 import ThemeTogglerPage from "../Pages/Docs/Components/Common/ThemeToggler/ThemeToggler.page";
 import CommonComponentsPage from "../Pages/Docs/Components/Common/Common.page";
+import FormsComponentsPage from "../Pages/Docs/Components/Forms/Forms.page";
 
 const AppRouter = () => {
   return (
@@ -35,6 +36,8 @@ const AppRouter = () => {
           />
           <Route path="/components/common/ring" element={<RingPage />} />
           <Route path="/components/common/theme-toggler" element={<ThemeTogglerPage />} />
+
+          <Route path="/components/forms" element={<FormsComponentsPage />} />
         </Route>
 
         <Route path="/docs" element={<Docs />} />

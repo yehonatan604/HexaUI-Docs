@@ -93,8 +93,8 @@ const Home = () => {
             description="Supports Server-Side Rendering out of the box, powered by Vite for optimal performance."
           />
           <FeatureCard
-            title="Modular Architecture"
-            description="Highly modular design allows you to use only what you need, keeping your project lean and efficient."
+            title="3D Components"
+            description="Support for 3D elements such as GLTF and FBX models, enabling rich, interactive 3D experiences in your UI."
           />
         </Flex>
 
