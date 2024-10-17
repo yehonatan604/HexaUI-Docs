@@ -12,7 +12,7 @@ type PropsTableProps = {
 
 const PropsTable = ({ tableProps }: PropsTableProps) => {
   return (
-    <table>
+    <table className=" max-w-5xl">
       <thead className="bg-zinc-700">
         <tr>
           <th className="py-2 px-4 text-left font-semibold border-b">Prop</th>
