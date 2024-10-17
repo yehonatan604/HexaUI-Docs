@@ -39,28 +39,28 @@ const FormsComponentsPage = () => {
           className="gap-6 flex-wrap max-w-6xl"
         >
           <FeatureCard
-            title="Form"
-            description="A comprehensive form wrapper component that simplifies the process of form creation and validation."
+            title="Text Input"
+            description="A versatile input component for various input types like text, number, password, and more, with customizable styles."
+          />
+          <FeatureCard
+            title="Label"
+            description="A label component to provide context and accessibility to form elements, fully customizable to suit your needs."
           />
           <FeatureCard
             title="Checkbox"
             description="A customizable checkbox component that supports different states and styles, suitable for various use cases."
           />
           <FeatureCard
+            title="Radio Button"
+            description="A radio button component for selecting one option from a group, fully customizable with different styles."
+          />
+          <FeatureCard
             title="Range Input"
             description="A range input component for selecting numeric values within a specific range, with customizable appearance."
           />
           <FeatureCard
-            title="Text Input"
-            description="A versatile text input component for entering single-line text, with customizable styles and validation."
-          />
-          <FeatureCard
             title="Select"
             description="A dropdown select component for choosing from multiple options, with custom styles and easy integration."
-          />
-          <FeatureCard
-            title="Label"
-            description="A label component to provide context and accessibility to form elements, fully customizable to suit your needs."
           />
         </Flex>
 

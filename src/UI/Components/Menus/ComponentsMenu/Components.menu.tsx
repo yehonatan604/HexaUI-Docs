@@ -45,36 +45,36 @@ const ComponentsMenu = () => {
     placement: FlexTypes.Start,
   } as SidebarHeaderOptions;
 
-  const common = {
+  const core = {
     accordion: {
       icon: <GiAccordion />,
       title: "Accordion",
-      link: "/components/common/accordion",
+      link: "/components/core/accordion",
     },
     button: {
       icon: <RxButton />,
       title: "Button",
-      link: "/components/common/button",
+      link: "/components/core/button",
     },
     card: {
       icon: <CgCardClubs />,
       title: "Card",
-      link: "/components/common/card",
+      link: "/components/core/card",
     },
     rainbowBorder: {
       icon: <BiBorderRadius />,
       title: "Rainbow Border",
-      link: "/components/common/rainbow-border",
+      link: "/components/core/rainbow-border",
     },
     ring: {
       icon: <PiFrameCorners />,
       title: "Ring",
-      link: "/components/common/ring",
+      link: "/components/core/ring",
     },
     themeToggler: {
       icon: <LuSun />,
       title: "Theme Toggler",
-      link: "/components/common/theme-toggler",
+      link: "/components/core/theme-toggler",
     },
   };
 
@@ -114,11 +114,11 @@ const ComponentsMenu = () => {
     },
   };
 
-  const form = {
+  const forms = {
     checkbox: {
       icon: <IoIosCheckboxOutline />,
       title: "Checkbox",
-      link: "/components/checkbox",
+      link: "/components/forms/checkbox",
     },
     label: {
       icon: <MdOutlineTextFields />,
@@ -168,30 +168,27 @@ const ComponentsMenu = () => {
       }}
     >
       <Sidebar.Header options={headerOptions}>
-        <Link
-          to="/components/common"
-          className="text-xl font-serif ml-5 hover:opacity-70"
-        >
-          Common
+        <Link to="/components/core" className="text-xl font-serif ml-5 hover:opacity-70">
+          Core Components
         </Link>
       </Sidebar.Header>
-      {Object.keys(common).map((key) => (
-        <Sidebar.Item options={itemOptions} icon={common[key].icon} key={key}>
-          <Link to={(common[key].link as string).toLowerCase()}>{common[key].title}</Link>
+      {Object.keys(core).map((key) => (
+        <Sidebar.Item options={itemOptions} icon={core[key].icon} key={key}>
+          <Link to={(core[key].link as string).toLowerCase()}>{core[key].title}</Link>
         </Sidebar.Item>
       ))}
       <Sidebar.Header options={headerOptions}>
         <Link to="/components/forms" className="text-xl font-serif ml-5 hover:opacity-70">
-          Forms
+          Form Components
         </Link>
       </Sidebar.Header>
-      {Object.keys(form).map((key) => (
-        <Sidebar.Item options={itemOptions} icon={form[key].icon} key={key}>
-          <Link to={(form[key].link as string).toLowerCase()}>{form[key].title}</Link>
+      {Object.keys(forms).map((key) => (
+        <Sidebar.Item options={itemOptions} icon={forms[key].icon} key={key}>
+          <Link to={(forms[key].link as string).toLowerCase()}>{forms[key].title}</Link>
         </Sidebar.Item>
       ))}
       <Sidebar.Header options={headerOptions}>
-        <h1 className="text-xl font-serif ml-5">Layout</h1>
+        <h1 className="text-xl font-serif ml-5">Layout Components</h1>
       </Sidebar.Header>
       {Object.keys(layout).map((key) => (
         <Sidebar.Item options={itemOptions} icon={layout[key].icon} key={key}>
@@ -199,7 +196,7 @@ const ComponentsMenu = () => {
         </Sidebar.Item>
       ))}
       <Sidebar.Header options={headerOptions}>
-        <h1 className="text-xl font-serif ml-5">Navigation</h1>
+        <h1 className="text-xl font-serif ml-5">Navigation Components</h1>
       </Sidebar.Header>
       {Object.keys(navigation).map((key) => (
         <Sidebar.Item options={itemOptions} icon={navigation[key].icon} key={key}>
@@ -209,7 +206,7 @@ const ComponentsMenu = () => {
         </Sidebar.Item>
       ))}
       <Sidebar.Header options={headerOptions}>
-        <h1 className="text-xl font-serif ml-5">Typography</h1>
+        <h1 className="text-xl font-serif ml-5">Typography Components</h1>
       </Sidebar.Header>
       {Object.keys(typography).map((key) => (
         <Sidebar.Item options={itemOptions} icon={typography[key].icon} key={key}>

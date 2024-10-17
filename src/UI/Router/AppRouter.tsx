@@ -17,6 +17,7 @@ import RingPage from "../Pages/Docs/Components/Common/Ring/Ring.page";
 import ThemeTogglerPage from "../Pages/Docs/Components/Common/ThemeToggler/ThemeToggler.page";
 import CommonComponentsPage from "../Pages/Docs/Components/Common/Common.page";
 import FormsComponentsPage from "../Pages/Docs/Components/Forms/Forms.page";
+import CheckboxPage from "../Pages/Docs/Components/Forms/Checkbox/Checkbox.page";
 
 const AppRouter = () => {
   return (
@@ -26,18 +27,16 @@ const AppRouter = () => {
 
         <Route path="/components" element={<PageHolder of="components" />}>
           <Route index element={<ComponentsPage />} />
-          <Route path="/components/common" element={<CommonComponentsPage />} />
-          <Route path="/components/common/accordion" element={<AccordionPage />} />
-          <Route path="/components/common/button" element={<ButtonPage />} />
-          <Route path="/components/common/card" element={<CardPage />} />
-          <Route
-            path="/components/common/rainbow-border"
-            element={<RainbowBorderPage />}
-          />
-          <Route path="/components/common/ring" element={<RingPage />} />
-          <Route path="/components/common/theme-toggler" element={<ThemeTogglerPage />} />
+          <Route path="/components/core" element={<CommonComponentsPage />} />
+          <Route path="/components/core/accordion" element={<AccordionPage />} />
+          <Route path="/components/core/button" element={<ButtonPage />} />
+          <Route path="/components/core/card" element={<CardPage />} />
+          <Route path="/components/core/rainbow-border" element={<RainbowBorderPage />} />
+          <Route path="/components/core/ring" element={<RingPage />} />
+          <Route path="/components/core/theme-toggler" element={<ThemeTogglerPage />} />
 
           <Route path="/components/forms" element={<FormsComponentsPage />} />
+          <Route path="/components/forms/checkbox" element={<CheckboxPage />} />
         </Route>
 
         <Route path="/docs" element={<Docs />} />
