@@ -31,6 +31,20 @@ const ThemeTogglerPage = () => {
           lightIcon={<MdOutlineLightMode size={40} />}
         />
 
+        <p className="text-lg max-md:p-10 w-3/5">
+          The ThemeToggler works seamlessly with the Tailwind CSS dark class. This means
+          that you can easily define styles that change based on the theme by using
+          classes like{" "}
+          <code className="text-sm font-mono bg-gray-200 dark:bg-gray-700">
+            dark:text-white
+          </code>
+          . For example:
+        </p>
+
+        <HighLighter>
+          {`<p className="text-lg dark:text-white text-black">Text</p>`}
+        </HighLighter>
+
         <div className="w-3/4">
           <h2 className="text-2xl font-bold">Usage</h2>
           <p className="mt-4 mb-8 text-lg ">
@@ -43,9 +57,9 @@ const ThemeTogglerPage = () => {
           <h2 className="text-2xl font-bold">Customizing ThemeToggler Appearance</h2>
           <p className="mt-4 mb-8 text-lg ">
             You can easily customize the appearance of the ThemeToggler component,
-            including the icons, sizes, and colors, using the options prop:
+            including the icons using the props:
           </p>
-          <RainbowBorder className="text-sm ml-4 mt-4">
+          <RainbowBorder className="text-sm mt-4">
             <HighLighter>{themeTogglerEx2}</HighLighter>
           </RainbowBorder>
         </div>
