@@ -2,22 +2,22 @@ import { Route, Routes } from "react-router-dom";
 import Home from "../Pages/Home/Home.page";
 import Start from "../Pages/Start/Start.page";
 import ComponentsPage from "../Pages/Docs/Components/Components.page";
-import AccordionPage from "../Pages/Docs/Components/Common/Accordion/Accordion.page";
-import ButtonPage from "../Pages/Docs/Components/Common/Button/Button.Page";
 import PageHolder from "../Components/Shared/PageHolder";
 import Hooks from "../Pages/Docs/Hooks/Hooks.page";
 import Helpers from "../Pages/Docs/Helpers/Helpers.page";
 import Types from "../Pages/Docs/Types/Types.page";
 import Themes from "../Pages/Themes/Themes.page";
 import Main from "../Pages/Docs/Types/ComponentsTypes/Main.page";
-import CardPage from "../Pages/Docs/Components/Common/Card/Card.page";
-import RainbowBorderPage from "../Pages/Docs/Components/Common/RainbowBorder/RainbowBorder.page";
 import Docs from "../Pages/Docs/Docs.page";
-import RingPage from "../Pages/Docs/Components/Common/Ring/Ring.page";
-import ThemeTogglerPage from "../Pages/Docs/Components/Common/ThemeToggler/ThemeToggler.page";
-import CommonComponentsPage from "../Pages/Docs/Components/Common/Common.page";
 import FormsComponentsPage from "../Pages/Docs/Components/Forms/Forms.page";
 import CheckboxPage from "../Pages/Docs/Components/Forms/Checkbox/Checkbox.page";
+import CommonComponentsPage from "../Pages/Docs/Components/Core/Common.page";
+import AccordionPage from "../Pages/Docs/Components/Core/Accordion/Accordion.page";
+import ButtonPage from "../Pages/Docs/Components/Core/Button/Button.Page";
+import CardPage from "../Pages/Docs/Components/Core/Card/Card.page";
+import RainbowBorderPage from "../Pages/Docs/Components/Core/RainbowBorder/RainbowBorder.page";
+import RingPage from "../Pages/Docs/Components/Core/Ring/Ring.page";
+import ThemeTogglerPage from "../Pages/Docs/Components/Core/ThemeToggler/ThemeToggler.page";
 
 const AppRouter = () => {
   return (

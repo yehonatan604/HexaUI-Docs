@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import Navbar from "./UI/Components/Navbar/Navbar";
 import { toast } from "react-hexa-dev";
-import AppRouter from "./UI/Router/AppRouter";
+import AppRouter from "./UI/Router/App.routes";
 import { useEffect } from "react";
 
 function App() {
