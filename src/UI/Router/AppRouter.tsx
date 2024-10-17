@@ -11,6 +11,8 @@ import Types from "../Pages/Docs/Types/Types.page";
 import Themes from "../Pages/Themes/Themes.page";
 import Main from "../Pages/Docs/Types/ComponentsTypes/Main.page";
 import CardPage from "../Pages/Docs/Components/Common/Card/Card.page";
+import RainbowBorderPage from "../Pages/Docs/Components/Common/RainbowBorder/RainbowBorder.page";
+import Docs from "../Pages/Docs/Docs.page";
 
 const AppRouter = () => {
   return (
@@ -23,7 +25,10 @@ const AppRouter = () => {
           <Route path="/components/accordion" element={<AccordionPage />} />
           <Route path="/components/button" element={<ButtonPage />} />
           <Route path="/components/card" element={<CardPage />} />
+          <Route path="/components/rainbow-border" element={<RainbowBorderPage />} />
         </Route>
+
+        <Route path="/docs" element={<Docs />} />
 
         <Route path="/hooks" element={<PageHolder of="hooks" />}>
           <Route index element={<Hooks />} />

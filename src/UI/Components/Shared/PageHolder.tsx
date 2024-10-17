@@ -1,4 +1,4 @@
-import { Flex } from "react-hexa-dev";
+import { Flex, Scrollbar } from "react-hexa-dev";
 import ComponentsMenu from "../Menus/ComponentsMenu/Components.menu";
 import { Outlet } from "react-router-dom";
 import HooksMenu from "../Menus/HooksMenu/Hooks.menu";
@@ -24,12 +24,16 @@ const PageHolder = ({ of }: { of: string }) => {
 
   return (
     <Flex>
-      <div className="h-[93vh] overflow-y-auto overflow-x-hidden">
-        <div className="w-[17vw]">{menu}</div>
-      </div>
-      <div className="max-h-[93dvh] h-93vh w-full overflow-y-auto">
-        <Outlet />
-      </div>
+      <Scrollbar maxHeight="fit">
+        <div className="h-[93vh]">
+          <div className="w-[15vw]">{menu}</div>
+        </div>
+      </Scrollbar>
+      <Scrollbar maxHeight="fit">
+        <div className="h-[93vh] h-93vh w-[85vw]">
+          <Outlet />
+        </div>
+      </Scrollbar>
     </Flex>
   );
 };

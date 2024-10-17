@@ -33,7 +33,7 @@ const CardPage = () => {
         >
           <Card
             options={{
-              bgVariant: "slate-800",
+              bgVariant: "black-d",
               textVariant: "standard-l",
               shadow: {
                 color: "standard",
@@ -64,11 +64,11 @@ const CardPage = () => {
 
           <Card
             options={{
-              bgVariant: "stone-900",
+              bgVariant: "black",
               textVariant: "standard-l",
               shadow: {
                 color: "standard",
-                size: "xl",
+                size: "lg",
               },
             }}
             className="w-[250px] h-[430px]"
@@ -103,11 +103,11 @@ const CardPage = () => {
 
           <Card
             options={{
-              bgVariant: "white-d",
+              bgVariant: "standard-l",
               textVariant: "black",
               shadow: {
                 color: "standard",
-                size: "xl",
+                size: "lg",
               },
             }}
             className="w-[250px] h-[430px]"
