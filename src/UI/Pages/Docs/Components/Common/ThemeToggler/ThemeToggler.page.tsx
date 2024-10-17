@@ -26,10 +26,16 @@ const ThemeTogglerPage = () => {
           user interface that requires a dark/light mode toggle.
         </p>
 
-        <ThemeToggler
-          darkIcon={<MdOutlineDarkMode size={40} />}
-          lightIcon={<MdOutlineLightMode size={40} />}
-        />
+        <Flex
+          options={{ justify: FlexTypes.Center, align: FlexTypes.Center }}
+          className="gap-10"
+        >
+          <ThemeToggler
+            darkIcon={<MdOutlineDarkMode size={40} />}
+            lightIcon={<MdOutlineLightMode size={40} />}
+          />
+          <ThemeToggler className="text-4xl mb-2" />
+        </Flex>
 
         <p className="text-lg max-md:p-10 w-3/5">
           The ThemeToggler works seamlessly with the Tailwind CSS dark class. This means
