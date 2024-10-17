@@ -1,14 +1,12 @@
 import { BrowserRouter } from "react-router-dom";
 import Navbar from "./UI/Components/Navbar/Navbar";
-import { toast, useTheme } from "react-hexa-dev";
+import { toast } from "react-hexa-dev";
 import AppRouter from "./UI/Router/AppRouter";
 import { useEffect } from "react";
 
 function App() {
-  const { colors, mode } = useTheme();
-
-  const textColor = mode === "dark" ? colors.textDark : colors.black;
-  const bgColor = mode === "dark" ? colors.backgroundDark : colors.backgroundLight;
+  //const textColor = mode === "dark" ? colors.textDark : colors.black;
+  //const bgColor = mode === "dark" ? colors.backgroundDark : colors.backgroundLight;
 
   useEffect(() => {
     toast.success("Welcome to HexaUI");
@@ -17,7 +15,9 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <div className={`min-h-screen overflow-hidden text-${textColor} bg-${bgColor}`}>
+        <div
+          className={`min-h-screen overflow-hidden dark:bg-black bg-white-d text-black dark:text-standard-l`}
+        >
           <Navbar />
           {<AppRouter />}
         </div>

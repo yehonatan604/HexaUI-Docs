@@ -49,32 +49,32 @@ const ComponentsMenu = () => {
     accordion: {
       icon: <GiAccordion />,
       title: "Accordion",
-      link: "/components/accordion",
+      link: "/components/common/accordion",
     },
     button: {
       icon: <RxButton />,
       title: "Button",
-      link: "/components/button",
+      link: "/components/common/button",
     },
     card: {
       icon: <CgCardClubs />,
       title: "Card",
-      link: "/components/card",
+      link: "/components/common/card",
     },
     rainbowBorder: {
       icon: <BiBorderRadius />,
       title: "Rainbow Border",
-      link: "/components/rainbow-border",
+      link: "/components/common/rainbow-border",
     },
     ring: {
       icon: <PiFrameCorners />,
       title: "Ring",
-      link: "/components/ring",
+      link: "/components/common/ring",
     },
     themeToggler: {
       icon: <LuSun />,
       title: "Theme Toggler",
-      link: "/components/theme-toggler",
+      link: "/components/common/theme-toggler",
     },
   };
 
@@ -173,7 +173,12 @@ const ComponentsMenu = () => {
       }}
     >
       <Sidebar.Header options={headerOptions}>
-        <h1 className="text-xl font-serif ml-5">Common</h1>
+        <Link
+          to="/components/common"
+          className="text-xl font-serif ml-5 hover:opacity-70"
+        >
+          Common
+        </Link>
       </Sidebar.Header>
       {Object.keys(common).map((key) => (
         <Sidebar.Item options={itemOptions} icon={common[key].icon} key={key}>

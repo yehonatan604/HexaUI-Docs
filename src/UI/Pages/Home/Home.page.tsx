@@ -1,10 +1,12 @@
-import { Flex, List, Hr, Quote, Button, Scrollbar } from "react-hexa-dev";
+import { Flex, List, Hr, Quote, Button, Scrollbar, useTheme } from "react-hexa-dev";
 import { FlexDir, FlexTypes, Sizes } from "react-hexa-dev";
 import { TCite } from "react-hexa-dev";
 import { Link } from "react-router-dom";
 import FeatureCard from "../../Components/Shared/FeatureCard";
 
 const Home = () => {
+  const { mode } = useTheme();
+
   const cite: TCite = {
     url: "https://reactjs.org/",
     text: "React Official Website",
@@ -98,8 +100,9 @@ const Home = () => {
 
         <h2 className="text-3xl font-bold mt-16 mb-6">Key Features</h2>
         <List
-          className="mt-4 space-y-3 max-w-2xl"
+          className="mt-4 space-y-3 max-w-2xl text-black"
           options={{
+            textVariant: mode === "light" ? "black-l" : "white",
             items: [
               "🎨 Dynamic Tailwind classes with JIT mode and dark mode support",
               "🌈 Customizable themes for consistent styling",

@@ -21,11 +21,11 @@ const FeatureCard = ({ title, description }: { title: string; description: strin
             variant: "standard",
           },
         }}
-        className="p-4 w-[300px] h-[200px] cursor-default"
+        className="p-4 w-[300px] h-[200px] cursor-default dark:bg-black-d dark:text-standard-l bg-white-d text-black-l"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
+        <h3 className="text-xl font-semibold mb-2 dark:text-white-l">{title}</h3>
         <p>{description}</p>
       </Card>
     </Ring>

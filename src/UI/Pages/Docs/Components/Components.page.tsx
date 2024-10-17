@@ -1,7 +1,7 @@
 import { Flex, List } from "react-hexa-dev";
 import { FlexDir, FlexTypes, Sizes, ListStyleTypes } from "react-hexa-dev";
 
-const Components = () => {
+const ComponentsPage = () => {
   return (
     <div className="flex justify-center">
       <Flex
@@ -69,4 +69,4 @@ const Components = () => {
   );
 };
 
-export default Components;
+export default ComponentsPage;
