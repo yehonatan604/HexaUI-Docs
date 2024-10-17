@@ -1,4 +1,4 @@
-import { RainbowBorder, Flex, Hr, useTheme, Ring, Sizes } from "react-hexa-dev";
+import { Flex, Hr, useTheme, Ring, Sizes } from "react-hexa-dev";
 import { FlexDir, FlexTypes } from "react-hexa-dev";
 import HighLighter from "../../../../../Components/Shared/HighLighter";
 import PropsTable from "../../../../../Components/Shared/PropsTable";
@@ -100,9 +100,7 @@ const RingPage = () => {
             You can easily customize the ring thickness, colors, and other visual
             properties of the Ring component using the options prop:
           </p>
-          <RainbowBorder className="text-sm ml-4 mt-4">
-            <HighLighter>{ringEx2}</HighLighter>
-          </RainbowBorder>
+          <HighLighter>{ringEx2}</HighLighter>
         </div>
 
         <Hr options={{ border: { thickness: "w-1/2" } }} />

@@ -1,4 +1,4 @@
-import { Button, Flex, Hr, RainbowBorder } from "react-hexa-dev";
+import { Button, Flex, Hr } from "react-hexa-dev";
 import { FlexDir, FlexTypes } from "react-hexa-dev";
 import HighLighter from "../../../../../Components/Shared/HighLighter";
 import { buttonEx1, buttonEx2 } from "./Button.code";
@@ -54,9 +54,7 @@ const ButtonPage = () => {
             You can easily customize the background color & size of the Button by using
             variants (as Variants or as string) and sizes (as Sizes or as string):
           </p>
-          <RainbowBorder className="text-sm ml-4 mt-4">
-            <HighLighter>{buttonEx2}</HighLighter>
-          </RainbowBorder>
+          <HighLighter>{buttonEx2}</HighLighter>
         </div>
 
         <Hr options={{ border: { thickness: "w-1/2" } }} />

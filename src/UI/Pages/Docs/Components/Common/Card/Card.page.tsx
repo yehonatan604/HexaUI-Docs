@@ -1,4 +1,4 @@
-import { Card, Button, Flex, Hr, RainbowBorder, Title, FlexWrap } from "react-hexa-dev";
+import { Card, Button, Flex, Hr, Title, FlexWrap } from "react-hexa-dev";
 import { FlexDir, FlexTypes } from "react-hexa-dev";
 import HighLighter from "../../../../../Components/Shared/HighLighter";
 import PropsTable from "../../../../../Components/Shared/PropsTable";
@@ -162,9 +162,7 @@ const CardPage = () => {
             You can easily customize the background color, text color, and shadow of the
             Card using the options prop:
           </p>
-          <RainbowBorder className="text-sm ml-4 mt-4">
-            <HighLighter>{cardEx2}</HighLighter>
-          </RainbowBorder>
+          <HighLighter>{cardEx2}</HighLighter>
         </div>
 
         <Hr options={{ border: { thickness: "w-1/2" } }} />

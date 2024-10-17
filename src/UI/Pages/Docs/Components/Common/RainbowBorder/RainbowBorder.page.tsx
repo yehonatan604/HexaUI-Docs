@@ -88,9 +88,7 @@ const RainbowBorderPage = () => {
             You can easily customize the thickness, gradient, and rounded corners of the
             RainbowBorder using the options prop:
           </p>
-          <RainbowBorder className="text-sm ml-4 mt-4">
-            <HighLighter>{rainbowBorderEx2}</HighLighter>
-          </RainbowBorder>
+          <HighLighter>{rainbowBorderEx2}</HighLighter>
         </div>
 
         <Hr options={{ border: { thickness: "w-1/2" } }} />

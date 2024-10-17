@@ -1,4 +1,4 @@
-import { RainbowBorder, Flex, Hr, ThemeToggler } from "react-hexa-dev";
+import { Flex, Hr, ThemeToggler } from "react-hexa-dev";
 import { FlexDir, FlexTypes } from "react-hexa-dev";
 import HighLighter from "../../../../../Components/Shared/HighLighter";
 import PropsTable from "../../../../../Components/Shared/PropsTable";
@@ -65,9 +65,7 @@ const ThemeTogglerPage = () => {
             You can easily customize the appearance of the ThemeToggler component,
             including the icons using the props:
           </p>
-          <RainbowBorder className="text-sm mt-4">
-            <HighLighter>{themeTogglerEx2}</HighLighter>
-          </RainbowBorder>
+          <HighLighter>{themeTogglerEx2}</HighLighter>
         </div>
 
         <Hr options={{ border: { thickness: "w-1/2" } }} />
