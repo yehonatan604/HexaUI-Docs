@@ -176,7 +176,7 @@ const CardPage = () => {
           <PropsTable tableProps={options} />
         </Flex>
 
-        <Flex options={{ direction: FlexDir.Col }} className="mb-9">
+        <Flex options={{ direction: FlexDir.Col }} className="mb-9 gap-4">
           <Flex options={{ justify: FlexTypes.Start }} className="w-full">
             <h2 className="text-2xl font-bold">Card Props</h2>
           </Flex>

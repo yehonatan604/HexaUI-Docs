@@ -14,6 +14,7 @@ import CardPage from "../Pages/Docs/Components/Common/Card/Card.page";
 import RainbowBorderPage from "../Pages/Docs/Components/Common/RainbowBorder/RainbowBorder.page";
 import Docs from "../Pages/Docs/Docs.page";
 import RingPage from "../Pages/Docs/Components/Common/Ring/Ring.page";
+import ThemeTogglerPage from "../Pages/Docs/Components/Common/ThemeToggler/ThemeToggler.page";
 
 const AppRouter = () => {
   return (
@@ -28,6 +29,7 @@ const AppRouter = () => {
           <Route path="/components/card" element={<CardPage />} />
           <Route path="/components/rainbow-border" element={<RainbowBorderPage />} />
           <Route path="/components/ring" element={<RingPage />} />
+          <Route path="/components/theme-toggler" element={<ThemeTogglerPage />} />
         </Route>
 
         <Route path="/docs" element={<Docs />} />
