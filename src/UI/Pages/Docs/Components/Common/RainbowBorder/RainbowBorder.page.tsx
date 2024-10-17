@@ -29,16 +29,30 @@ const RainbowBorderPage = () => {
         </p>
 
         <Flex options={{ justify: FlexTypes.Center }} className="gap-10">
-          <RainbowBorder options={{ thickness: "xs", gradient: gradients.primary }}>
-            <div className={`p-5 rounded bg-black-d text-standard-l`}>
+          <RainbowBorder
+            options={{
+              thickness: "xs",
+              gradient: gradients.primary,
+              innerBgVariant: "black-d",
+              innerTextVariant: "standard-l",
+            }}
+          >
+            <div className="p-5">
               <p className="text-center">Hello</p>
               <p className="text-center">Hello</p>
               <p className="text-center">Hello</p>
             </div>
           </RainbowBorder>
 
-          <RainbowBorder options={{ thickness: "sm", gradient: gradients.secondary }}>
-            <div className={`p-5 rounded bg-black-d text-standard-l`}>
+          <RainbowBorder
+            options={{
+              thickness: "sm",
+              gradient: gradients.secondary,
+              innerBgVariant: "black-d",
+              innerTextVariant: "standard-l",
+            }}
+          >
+            <div className="p-5">
               <p className="text-center">Hello</p>
               <p className="text-center">Hello</p>
               <p className="text-center">Hello</p>
@@ -54,7 +68,7 @@ const RainbowBorderPage = () => {
               innerTextVariant: "white",
             }}
           >
-            <div className={`rounded-full text-white`}>
+            <div className="rounded-full">
               <GiAlliedStar size={100} />
             </div>
           </RainbowBorder>

@@ -4,21 +4,28 @@ const props: TTableProps[] = [
     {
         prop: "children",
         type: "ReactNode",
-        description: "The content inside the Card. Usually text or an image.",
+        description: "The content inside the Rainbow Border. Usually div element.",
         required: true,
         defaultValue: "null",
     },
     {
         prop: "Options",
         type: "CardOptions",
-        description: "Style options for the Card. see the Options table for more.",
+        description: "Style options for the Rainbow Border. see the Options table for more.",
         required: false,
         defaultValue: "null",
     },
     {
+        prop: "innerClassname",
+        type: "string",
+        description: "className for the Rainbow Border's inner content.",
+        required: false,
+        defaultValue: "",
+    },
+    {
         prop: "...props",
         type: "any",
-        description: "Supports all standard React Div element props such as padding, margin, etc.",
+        description: "Supports all standard React div element props such as padding, margin, etc.",
         required: false,
         defaultValue: "null",
     },
@@ -26,84 +33,47 @@ const props: TTableProps[] = [
 
 const options: TTableProps[] = [
     {
-        prop: "padding",
+        prop: "thickness",
         type: "Sizes | string",
-        description: `The padding of the Card. (e.g., "sm" | Sizes.Sm).`,
+        description: `The thickness of the Rainbow Border. (e.g., "sm" | Sizes.Sm).`,
         required: false,
-        defaultValue: "2",
+        defaultValue: "[1.5px]",
+    },
+    {
+        prop: "gradient",
+        type: "string",
+        description: `The gradient color variant of the Rainbow Border. (e.g., "success").`,
+        required: false,
+        defaultValue: "primary",
+    },
+    {
+        prop: "innerBgVariant",
+        type: "string",
+        description: `The background color variant of the Rainbow Border's inner content. (e.g., "success-d").`,
+        required: false,
+        defaultValue: "black",
+    },
+    {
+        prop: "innerTextVariant",
+        type: "string",
+        description: `The text color variant of the Rainbow Border's inner content. (e.g., "failure").`,
+        required: false,
+        defaultValue: "white",
     },
     {
         prop: "rounded",
         type: "Sizes | string",
-        description: `The border radius of the Card. (e.g., "sm" | Sizes.Sm).`,
+        description: `The border radius of the Rainbow Border. (e.g., "sm" | Sizes.Sm).`,
         required: false,
-        defaultValue: "md",
+        defaultValue: "rounded",
     },
     {
-        prop: "gap",
-        type: "number",
-        description: `The gap between the Card's children.`,
+        prop: "innerRounded",
+        type: "Sizes | string",
+        description: `The border radius of the Rainbow Border's inner content. (e.g., "sm" | Sizes.Sm).`,
         required: false,
-        defaultValue: "4",
+        defaultValue: "rounded",
     },
 ];
 
-const headerProps: TTableProps[] = [
-    {
-        prop: "children",
-        type: "ReactNode",
-        description: "The content inside the Card's header. Usually text or image.",
-        required: true,
-        defaultValue: "null",
-    },
-    {
-        prop: "Options",
-        type: "ComponentOptions",
-        description: "Style options for the Card's header. see the Options table for more.",
-        required: false,
-        defaultValue: "null",
-    },
-    {
-        prop: "...props",
-        type: "any",
-        description: "Supports all standard React Div element props such as padding, margin, etc.",
-        required: false,
-        defaultValue: "null",
-    },
-];
-
-const footerProps: TTableProps[] = [
-    {
-        prop: "children",
-        type: "ReactNode",
-        description: "The content inside the Card's Footer. Usually icons or buttons.",
-        required: true,
-        defaultValue: "null",
-    },
-    {
-        prop: "Options",
-        type: "CardFooterOptions",
-        description: "Style options for the Card. see the Options table for more.",
-        required: false,
-        defaultValue: "null",
-    },
-    {
-        prop: "...props",
-        type: "any",
-        description: "Supports all standard React Div element props such as padding, margin, etc.",
-        required: false,
-        defaultValue: "null",
-    },
-];
-
-const footerOptions: TTableProps[] = [
-    {
-        prop: "justify",
-        type: "FlexTypes",
-        description: `The justify content property of the Card Fotter's Flex container.`,
-        required: false,
-        defaultValue: "start",
-    },
-];
-
-export { props, options, footerProps, footerOptions, headerProps };
+export { options, props };

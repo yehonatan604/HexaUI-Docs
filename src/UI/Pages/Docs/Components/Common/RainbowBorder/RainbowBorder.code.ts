@@ -1,95 +1,70 @@
 import { hexaPath } from "../../../../../../Data/Constants/Paths";
 
-const rainbowBorderEx1 = `import { Card, Flex, FlexTypes } from '${hexaPath}';
+const rainbowBorderEx1 = `import { RainbowBorder } from '${hexaPath}';
 
 const App = () => {
   return (
-    <Flex options={{ justify: FlexTypes.Center }}>
-      <Card
-        options={{
-          bgVariant: "standard-d",
-          textVariant: "standard-l",
-          shadow: {
-            color: "standard",
-            size: "xl",
-          },
-        }}
-        className="w-[250px]"
-      >
-        <Card.Header>
-          <img
-            src="https://loremflickr.com/250/200"
-            alt="Random"
-            className="w-[250px] h-32 object-cover m-auto rounded"
-          />
-        </Card.Header>
-
-        <Title options={{ padding: "p-1", size: "sm", align: FlexTypes.Start }}>
-          Card 1
-        </Title>
-        <p className="px-2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, expedita
-          updates. Veniam maiores assumenda.
-        </p>
-        
-        <Card.Footer>
-          <Button
-            options={{
-              bgVariant: "approve",
-              textVariant: "standard-l",
-            }}
-          >
-            +
-          </Button>
-        </Card.Footer>
-      </Card>
-    </Flex>
+    <RainbowBorder>
+      <div className="p-5 rounded bg-black-d text-standard-l">
+        <p className="text-center">Hello</p>
+        <p className="text-center">Hello</p>
+        <p className="text-center">Hello</p>
+      </div>
+    </RainbowBorder>
   );
 };
 `;
 
-const rainbowBorderEx2 = `import { Button, Flex, Sizes } from '${hexaPath}'
+const rainbowBorderEx2 = `import { RainbowBorder, Flex, Flex, FlexTypes, useTheme } from '${hexaPath}'
 
 const App = () => {
+  const { gradients } = useTheme();
+  
   return (
-    <Flex options={{ justify: FlexTypes.Center }}>
-      <Card
+    <Flex options={{ justify: FlexTypes.Center }} className="gap-10">
+      <RainbowBorder
         options={{
-          bgVariant: "standard-d",
-          textVariant: "standard-l",
-          shadow: {
-            color: "standard",
-            size: "xl",
-          },
+          thickness: "xs",
+          gradient: gradients.primary,
+          innerBgVariant: "black-d",
+          innerTextVariant: "standard-l",
         }}
-        className="w-[250px]"
       >
-        <Card.Header>
-        <img
-          src="https://loremflickr.com/250/200"
-          alt="Random"
-          className="w-[250px] h-32 object-cover m-auto rounded"
-        />
-        </Card.Header>
+        <div className="p-5">
+          <p className="text-center">Hello</p>
+          <p className="text-center">Hello</p>
+          <p className="text-center">Hello</p>
+        </div>
+      </RainbowBorder>
 
-        <Title options={{ padding: "p-1", size: "sm", align: FlexTypes.Start }}>
-          Card 1
-        </Title>
-        <p className="px-2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, expedita
-          updates. Veniam maiores assumenda.
-        </p>
-        <Card.Footer>
-          <Button
-            options={{
-              bgVariant: "approve",
-              textVariant: "standard-l",
-            }}
-          >
-            +
-          </Button>
-        </Card.Footer>
-      </Card>
+      <RainbowBorder
+        options={{
+          thickness: "sm",
+          gradient: gradients.secondary,
+          innerBgVariant: "black-d",
+          innerTextVariant: "standard-l",
+        }}
+      >
+        <div className="p-5">
+          <p className="text-center">Hello</p>
+          <p className="text-center">Hello</p>
+          <p className="text-center">Hello</p>
+        </div>
+      </RainbowBorder>
+
+      <RainbowBorder
+        options={{
+          thickness: "3xl",
+          gradient: gradients.primary,
+          rounded: "full",
+          innerBgVariant: "success-d",
+          innerTextVariant: "white",
+        }}
+      >
+        <div className="rounded-full">
+          <GiAlliedStar size={100} />
+        </div>
+      </RainbowBorder>
     </Flex>
   );
 };
