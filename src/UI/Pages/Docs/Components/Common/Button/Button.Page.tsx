@@ -24,32 +24,8 @@ const ButtonPage = () => {
           supports various variants, sizes, and rounded styles.
         </p>
 
-        <div className="w-3/4">
-          <h2 className="text-2xl font-bold">Usage</h2>
-          <p className="mt-4 mb-8 text-lg ">
-            Here’s a basic example of how to use the Button component:
-          </p>
-          <HighLighter>{buttonEx1}</HighLighter>
-        </div>
-
-        <Flex options={{ justify: FlexTypes.Center }}>
-          <Button>Click Me</Button>
-        </Flex>
-
-        <Hr options={{ border: { thickness: "w-1/2" } }} />
-
-        <div className="w-3/4">
-          <h2 className="text-2xl font-bold">Customizing Button Color & Sizes</h2>
-          <p className="mt-4 mb-8 text-lg ">
-            You can easily customize the background color & size of the Button by using
-            variants (as Variants or as string) and sizes (as Sizes or as string):
-          </p>
-          <RainbowBorder className="text-sm ml-4 mt-4">
-            <HighLighter>{buttonEx2}</HighLighter>
-          </RainbowBorder>
-        </div>
-
         <Flex className="gap-4" options={{ justify: "center", align: "center" }}>
+          <Button>Click Me</Button>
           <Button
             options={{
               bgVariant: "success-d",
@@ -63,6 +39,25 @@ const ButtonPage = () => {
             Warning
           </Button>
         </Flex>
+
+        <div className="w-3/4">
+          <h2 className="text-2xl font-bold">Usage</h2>
+          <p className="mt-4 mb-8 text-lg ">
+            Here’s a basic example of how to use the Button component:
+          </p>
+          <HighLighter>{buttonEx1}</HighLighter>
+        </div>
+
+        <div className="w-3/4">
+          <h2 className="text-2xl font-bold">Customizing Button Color & Sizes</h2>
+          <p className="mt-4 mb-8 text-lg ">
+            You can easily customize the background color & size of the Button by using
+            variants (as Variants or as string) and sizes (as Sizes or as string):
+          </p>
+          <RainbowBorder className="text-sm ml-4 mt-4">
+            <HighLighter>{buttonEx2}</HighLighter>
+          </RainbowBorder>
+        </div>
 
         <Hr options={{ border: { thickness: "w-1/2" } }} />
 

@@ -82,8 +82,6 @@ const RainbowBorderPage = () => {
           <HighLighter>{rainbowBorderEx1}</HighLighter>
         </div>
 
-        <Hr options={{ border: { thickness: "w-1/2" } }} />
-
         <div className="w-3/4">
           <h2 className="text-2xl font-bold">Customizing RainbowBorder Appearance</h2>
           <p className="mt-4 mb-8 text-lg ">

@@ -15,11 +15,11 @@ const App = () => {
 };
 `;
 
-const rainbowBorderEx2 = `import { RainbowBorder, Flex, Flex, FlexTypes, useTheme } from '${hexaPath}'
+const rainbowBorderEx2 = `import { RainbowBorder, Flex, FlexTypes, useTheme } from '${hexaPath}'
 
 const App = () => {
   const { gradients } = useTheme();
-  
+
   return (
     <Flex options={{ justify: FlexTypes.Center }} className="gap-10">
       <RainbowBorder

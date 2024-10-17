@@ -28,20 +28,14 @@ const AccordionPage = () => {
           needed.
         </p>
 
-        <div className="w-3/4">
-          <h2 className="text-2xl font-bold">Usage</h2>
-          <p className="mt-4 mb-8 text-lg ">
-            Here’s a basic example of how to use the Accordion component:
-          </p>
-          <HighLighter>{accordionEx1}</HighLighter>
-        </div>
-
-        <Flex className="w-1/4">
+        {/* Accordion Variants by using string */}
+        <Flex options={{ direction: "col" }} className="w-1/4 gap-4">
           <Accordion
             options={{
-              title: "Accordion Standard",
-              border: { show: true, variant: "standard" },
-              textVariant: "standard",
+              title: "Accordion",
+              border: { show: true, variant: colors.standrad },
+              textVariant: colors.standradLight,
+              titleVariant: colors.warning,
             }}
           >
             <p>
@@ -51,19 +45,8 @@ const AccordionPage = () => {
               quibusdam voluptatum voluptatem quia iusto quas dolorem.
             </p>
           </Accordion>
-        </Flex>
-        <Hr options={{ border: { thickness: "w-1/2" } }} />
-        <div className="w-3/4">
-          <h2 className="text-2xl font-bold">Customizing the Border Color</h2>
-          <p className="mt-4 mb-8 text-lg ">
-            You can easily customize the border color of the Accordion by using either
-            variants (as Variants or as string) or Tailwind classes:
-          </p>
-          <HighLighter>{accordionEx2}</HighLighter>
-        </div>
 
-        {/* Accordion Variants by using string */}
-        <div className="w-1/4">
+          {/* Accordion Variants by using string */}
           <Accordion
             options={{
               title: "Accordion",
@@ -79,10 +62,8 @@ const AccordionPage = () => {
               quibusdam voluptatum voluptatem quia iusto quas dolorem.
             </p>
           </Accordion>
-        </div>
 
-        {/* Accordion Variants by using Variants */}
-        <div className="w-1/4">
+          {/* Accordion Variants by using Variants */}
           <Accordion
             options={{
               title: "Accordion",
@@ -98,6 +79,23 @@ const AccordionPage = () => {
               quibusdam voluptatum voluptatem quia iusto quas dolorem.
             </p>
           </Accordion>
+        </Flex>
+
+        <div className="w-3/4">
+          <h2 className="text-2xl font-bold">Usage</h2>
+          <p className="mt-4 mb-8 text-lg ">
+            Here’s a basic example of how to use the Accordion component:
+          </p>
+          <HighLighter>{accordionEx1}</HighLighter>
+        </div>
+
+        <div className="w-3/4">
+          <h2 className="text-2xl font-bold">Customizing the Border Color</h2>
+          <p className="mt-4 mb-8 text-lg ">
+            You can easily customize the border color of the Accordion by using either
+            variants (as Variants or as string) or Tailwind classes:
+          </p>
+          <HighLighter>{accordionEx2}</HighLighter>
         </div>
 
         <Hr options={{ border: { thickness: "w-1/2" } }} />

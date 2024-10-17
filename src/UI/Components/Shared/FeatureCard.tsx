@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { Card, RingBorder } from "react-hexa-dev";
+import { Card, Ring } from "react-hexa-dev";
 
 const FeatureCard = ({ title, description }: { title: string; description: string }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <RingBorder
+    <Ring
       options={{
         ringThickness: 2,
         borderThickness: 2,
@@ -28,7 +28,7 @@ const FeatureCard = ({ title, description }: { title: string; description: strin
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
         <p>{description}</p>
       </Card>
-    </RingBorder>
+    </Ring>
   );
 };
 
