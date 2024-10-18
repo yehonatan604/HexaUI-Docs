@@ -18,6 +18,7 @@ import CardPage from "../Pages/Docs/Components/Core/Card/Card.page";
 import RainbowBorderPage from "../Pages/Docs/Components/Core/RainbowBorder/RainbowBorder.page";
 import RingPage from "../Pages/Docs/Components/Core/Ring/Ring.page";
 import ThemeTogglerPage from "../Pages/Docs/Components/Core/ThemeToggler/ThemeToggler.page";
+import LabelPage from "../Pages/Docs/Components/Forms/Label/Label.page";
 
 const AppRouter = () => {
   return (
@@ -37,6 +38,7 @@ const AppRouter = () => {
 
           <Route path="/components/forms" element={<FormsComponentsPage />} />
           <Route path="/components/forms/checkbox" element={<CheckboxPage />} />
+          <Route path="/components/forms/label" element={<LabelPage />} />
         </Route>
 
         <Route path="/docs" element={<Docs />} />

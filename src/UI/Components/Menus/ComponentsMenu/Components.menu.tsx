@@ -123,22 +123,22 @@ const ComponentsMenu = () => {
     label: {
       icon: <MdOutlineTextFields />,
       title: "Label",
-      link: "/components/label",
+      link: "/components/forms/label",
     },
     rangeInput: {
       icon: <CiSliderHorizontal />,
       title: "RangeInput",
-      link: "/components/range-input",
+      link: "/components/forms/range-input",
     },
     select: {
       icon: <GoSingleSelect />,
       title: "Select",
-      link: "/components/select",
+      link: "/components/forms/select",
     },
     textInput: {
       icon: <RiInputMethodLine />,
       title: "TextInput",
-      link: "/components/text-input",
+      link: "/components/forms/text-input",
     },
   };
 
