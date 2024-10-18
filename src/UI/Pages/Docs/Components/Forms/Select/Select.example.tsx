@@ -11,7 +11,7 @@ const SelectExamples = () => {
         align: FlexTypes.Center,
         wrap: FlexWrap.Wrap,
       }}
-      className="m-auto mb-5 gap-4 w-1/3 text-2xl"
+      className="m-auto mb-5 gap-4 w-3/4 text-2xl"
     >
       <Select
         items={[

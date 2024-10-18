@@ -32,7 +32,6 @@ const Themes = () => {
           <h3 className="text-2xl font-bold">Current Theme Details:</h3>
           <p className="mt-2 text-lg">Mode: {mode}</p>
           <p className="mt-2 text-lg">Primary Color: {colors.primary}</p>
-          <p className="mt-2 text-lg">Success Gradient: {gradients.success}</p>
         </div>
 
         <div className="w-4/5">

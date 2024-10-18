@@ -15,6 +15,7 @@ export type DocsPageGeneratorProps = {
   tableOptions?: TTableProps[];
   extraUpperContent?: ReactNode;
   dependsOnTheme?: boolean;
+  overrideNotes?: boolean;
 };
 
 const DocsPageGenerator = ({
@@ -28,6 +29,7 @@ const DocsPageGenerator = ({
   tableProps,
   tableOptions,
   dependsOnTheme,
+  overrideNotes,
 }: DocsPageGeneratorProps) => {
   return (
     <div className="flex justify-center">
@@ -95,11 +97,18 @@ const DocsPageGenerator = ({
           </Flex>
         )}
 
-        <Flex options={{ direction: FlexDir.Col }} className="mb-9 gap-4">
+        <Flex options={{ direction: FlexDir.Col }} className="gap-4 mb-9">
           <Flex options={{ justify: FlexTypes.Start }} className="w-full">
             <h2 className="text-2xl font-bold">{title} Props</h2>
           </Flex>
           <PropsTable tableProps={tableProps} />
+          {overrideNotes && (
+            <div className="w-3/4">
+              <p className="text-lg">
+                * Overriding this will completely replace the default styles.
+              </p>
+            </div>
+          )}
         </Flex>
       </Flex>
     </div>
