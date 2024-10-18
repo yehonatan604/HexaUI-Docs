@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Sidebar } from "react-hexa-dev";
 import { FlexTypes } from "react-hexa-dev";
 import { useTheme } from "react-hexa-dev";
@@ -7,19 +8,18 @@ import { SidebarItemOptions } from "react-hexa-dev";
 import { TBorder } from "react-hexa-dev";
 import { BiBorderRadius } from "react-icons/bi";
 import { BsBorderAll } from "react-icons/bs";
-import { CgCardClubs } from "react-icons/cg";
+import { CgCardClubs, CgDisplayFlex, CgDockBottom } from "react-icons/cg";
 import { CiSliderHorizontal } from "react-icons/ci";
-import { FaFont } from "react-icons/fa6";
-import { Gi3dMeeple, GiAccordion } from "react-icons/gi";
+import { FaFont, FaRegSquare } from "react-icons/fa6";
+import { GiAccordion } from "react-icons/gi";
 import { GoSingleSelect } from "react-icons/go";
 import { IoIosCheckboxOutline, IoMdQuote } from "react-icons/io";
-import { LuSun } from "react-icons/lu";
+import { LuPipette, LuSun } from "react-icons/lu";
 import { MdOutlineHorizontalRule, MdOutlineTextFields } from "react-icons/md";
-import { PiFrameCorners, PiListDashes, PiSidebar } from "react-icons/pi";
+import { PiFrameCorners, PiListDashes, PiMouseScroll, PiSidebar } from "react-icons/pi";
 import { RiInputMethodLine } from "react-icons/ri";
 import { RxButton } from "react-icons/rx";
 import { TbLayoutBottombarFilled, TbLayoutNavbarFilled } from "react-icons/tb";
-import { Link } from "react-router-dom";
 
 const ComponentsMenu = () => {
   const { colors } = useTheme();
@@ -80,14 +80,34 @@ const ComponentsMenu = () => {
 
   const layout = {
     flex: {
-      icon: <Gi3dMeeple />,
+      icon: <CgDisplayFlex />,
       title: "Flex",
-      link: "/components/flex",
+      link: "/components/layout/flex",
     },
-    grid: {
+    dataGrid: {
+      icon: <PiListDashes />,
+      title: "DataGrid",
+      link: "/components/layout/data-grid",
+    },
+    autoGrid: {
       icon: <BsBorderAll />,
-      title: "Grid",
-      link: "/components/grid",
+      title: "AutoGrid",
+      link: "/components/layout/auto-grid",
+    },
+    docPanel: {
+      icon: <CgDockBottom />,
+      title: "DocPanel",
+      link: "/components/layout/doc-panel",
+    },
+    scrollarea: {
+      icon: <PiMouseScroll />,
+      title: "ScrollArea",
+      link: "/components/layout/scroll-area",
+    },
+    block: {
+      icon: <FaRegSquare />,
+      title: "Block",
+      link: "/components/layout/block",
     },
   };
 
@@ -140,6 +160,11 @@ const ComponentsMenu = () => {
       title: "TextInput",
       link: "/components/forms/text-input",
     },
+    colorPicker: {
+      icon: <LuPipette />,
+      title: "ColorPicker",
+      link: "/components/forms/color-picker",
+    },
   };
 
   const navigation = {
@@ -188,7 +213,12 @@ const ComponentsMenu = () => {
         </Sidebar.Item>
       ))}
       <Sidebar.Header options={headerOptions}>
-        <h1 className="text-xl font-serif ml-5">Layout Components</h1>
+        <Link
+          to="/components/layout"
+          className="text-xl font-serif ml-5 hover:opacity-70"
+        >
+          Layout Components
+        </Link>
       </Sidebar.Header>
       {Object.keys(layout).map((key) => (
         <Sidebar.Item options={itemOptions} icon={layout[key].icon} key={key}>

@@ -14,6 +14,7 @@ export type DocsPageGeneratorProps = {
   tableProps: TTableProps[];
   tableOptions?: TTableProps[];
   extraUpperContent?: ReactNode;
+  dependsOnTheme?: boolean;
 };
 
 const DocsPageGenerator = ({
@@ -26,6 +27,7 @@ const DocsPageGenerator = ({
   customText,
   tableProps,
   tableOptions,
+  dependsOnTheme,
 }: DocsPageGeneratorProps) => {
   return (
     <div className="flex justify-center">
@@ -82,6 +84,14 @@ const DocsPageGenerator = ({
               <h2 className="text-2xl font-bold">{title} Options</h2>
             </Flex>
             <PropsTable tableProps={tableOptions} />
+            {dependsOnTheme && (
+              <div className="w-3/4">
+                <p className="text-lg">
+                  * The appearance of this component depends on the theme mode you are
+                  using.
+                </p>
+              </div>
+            )}
           </Flex>
         )}
 

@@ -19,6 +19,11 @@ import RainbowBorderPage from "../Pages/Docs/Components/Core/RainbowBorder/Rainb
 import RingPage from "../Pages/Docs/Components/Core/Ring/Ring.page";
 import ThemeTogglerPage from "../Pages/Docs/Components/Core/ThemeToggler/ThemeToggler.page";
 import LabelPage from "../Pages/Docs/Components/Forms/Label/Label.page";
+import RangeInputPage from "../Pages/Docs/Components/Forms/RangeInput/RangeInput.page";
+import SelectPage from "../Pages/Docs/Components/Forms/Select/Select.page";
+import TextInputPage from "../Pages/Docs/Components/Forms/TextInput/TextInput.page";
+import FlexPage from "../Pages/Docs/Components/Layout/Flex/Flex.page";
+import LayoutComponentsPage from "../Pages/Docs/Components/Layout/Layout.page";
 
 const AppRouter = () => {
   return (
@@ -39,6 +44,12 @@ const AppRouter = () => {
           <Route path="/components/forms" element={<FormsComponentsPage />} />
           <Route path="/components/forms/checkbox" element={<CheckboxPage />} />
           <Route path="/components/forms/label" element={<LabelPage />} />
+          <Route path="/components/forms/range-input" element={<RangeInputPage />} />
+          <Route path="/components/forms/text-input" element={<TextInputPage />} />
+          <Route path="/components/forms/select" element={<SelectPage />} />
+
+          <Route path="/components/layout" element={<LayoutComponentsPage />} />
+          <Route path="/components/layout/flex" element={<FlexPage />} />
         </Route>
 
         <Route path="/docs" element={<Docs />} />
