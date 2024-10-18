@@ -3,7 +3,7 @@ import { FlexDir, FlexTypes, Sizes } from "react-hexa-dev";
 import { Link } from "react-router-dom";
 import FeatureCard from "../../../../Components/Shared/FeatureCard";
 
-const CommonComponentsPage = () => {
+const CoreComponentsPage = () => {
   return (
     <div className="flex justify-center">
       <Flex
@@ -95,4 +95,4 @@ const CommonComponentsPage = () => {
   );
 };
 
-export default CommonComponentsPage;
+export default CoreComponentsPage;
