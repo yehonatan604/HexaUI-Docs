@@ -1,4 +1,4 @@
-import { Scrollbar } from "react-hexa-dev";
+import { ScrollArea } from "react-hexa-dev";
 import {
   FaBaby,
   FaGalacticRepublic,
@@ -27,7 +27,7 @@ const ScrollAreaExamples = () => {
   };
 
   return (
-    <Scrollbar maxHeight="fit">
+    <ScrollArea maxHeight="fit">
       <div className="m-auto size-[250px] gap-4 bg-white text-2xl">
         <div className="m-auto h-[500px] w-[500px] bg-red-500 text-2xl relative">
           {words.map((word, index) => (
@@ -46,7 +46,7 @@ const ScrollAreaExamples = () => {
           ))}
         </div>
       </div>
-    </Scrollbar>
+    </ScrollArea>
   );
 };
 

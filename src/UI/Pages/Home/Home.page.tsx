@@ -1,4 +1,4 @@
-import { Flex, List, Hr, Quote, Button, Scrollbar, useTheme } from "react-hexa-dev";
+import { Flex, List, Hr, Quote, Button, ScrollArea, useTheme } from "react-hexa-dev";
 import { FlexDir, FlexTypes, Sizes } from "react-hexa-dev";
 import { TCite } from "react-hexa-dev";
 import { Link } from "react-router-dom";
@@ -15,7 +15,7 @@ const Home = () => {
   };
 
   return (
-    <Scrollbar maxHeight="fit">
+    <ScrollArea maxHeight="fit">
       <Flex
         options={{
           direction: FlexDir.Col,
@@ -168,7 +168,7 @@ const Home = () => {
           </Button>
         </Flex>
       </Flex>
-    </Scrollbar>
+    </ScrollArea>
   );
 };
 

@@ -1,10 +1,10 @@
-import { Flex, Button, Hr, Scrollbar } from "react-hexa-dev";
+import { Flex, Button, Hr, ScrollArea } from "react-hexa-dev";
 import { FlexDir, FlexTypes, Sizes } from "react-hexa-dev";
 import { Link } from "react-router-dom";
 
 const Docs = () => {
   return (
-    <Scrollbar maxHeight="fit">
+    <ScrollArea maxHeight="fit">
       <Flex
         options={{
           direction: FlexDir.Col,
@@ -117,7 +117,7 @@ const Docs = () => {
           </Button>
         </Flex>
       </Flex>
-    </Scrollbar>
+    </ScrollArea>
   );
 };
 

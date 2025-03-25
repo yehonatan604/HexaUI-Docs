@@ -14,12 +14,12 @@ import RangeInputPage from "../Pages/Docs/Components/Forms/RangeInput/RangeInput
 import SelectPage from "../Pages/Docs/Components/Forms/Select/Select.page";
 import TextInputPage from "../Pages/Docs/Components/Forms/TextInput/TextInput.page";
 import FlexPage from "../Pages/Docs/Components/Layout/Flex/Flex.page";
-import ColorPickerPage from "../Pages/Docs/Components/Forms/ColorPicker/ColorPicker.page";
 import AutoGridPage from "../Pages/Docs/Components/Layout/AutoGrid/AutoGrid.page";
 import DataGridPage from "../Pages/Docs/Components/Layout/DataGrid/DataGrid.page";
 import DocPanelPage from "../Pages/Docs/Components/Layout/DocPanel/DocPanel.page";
 import ScrollAreaPage from "../Pages/Docs/Components/Layout/ScrollArea/ScrollArea.page";
 import BlockPage from "../Pages/Docs/Components/Layout/Block/Block.page";
+import NavigationComponentsPage from "../Pages/Docs/Components/Navigation/Navigation.page";
 
 const ComponentRoutes = () => (
   <Routes>
@@ -39,7 +39,6 @@ const ComponentRoutes = () => (
       <Route path="range-input" element={<RangeInputPage />} />
       <Route path="text-input" element={<TextInputPage />} />
       <Route path="select" element={<SelectPage />} />
-      <Route path="color-picker" element={<ColorPickerPage />} />
     </Route>
     <Route path="layout">
       <Route index element={<LayoutComponentsPage />} />
@@ -49,6 +48,9 @@ const ComponentRoutes = () => (
       <Route path="doc-panel" element={<DocPanelPage />} />
       <Route path="scroll-area" element={<ScrollAreaPage />} />
       <Route path="block" element={<BlockPage />} />
+    </Route>
+    <Route path="navigation">
+      <Route index element={<NavigationComponentsPage />} />
     </Route>
   </Routes>
 );

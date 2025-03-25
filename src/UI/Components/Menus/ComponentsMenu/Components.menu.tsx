@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import { Sidebar } from "react-hexa-dev";
 import { FlexTypes } from "react-hexa-dev";
 import { useTheme } from "react-hexa-dev";
-import { SidebarOptions } from "react-hexa-dev";
-import { SidebarHeaderOptions } from "react-hexa-dev";
-import { SidebarItemOptions } from "react-hexa-dev";
+import { TSidebarOptions } from "react-hexa-dev";
+import { TSidebarHeaderOptions } from "react-hexa-dev";
+import { TSidebarItemOptions } from "react-hexa-dev";
 import { TBorder } from "react-hexa-dev";
 import { BiBorderRadius } from "react-icons/bi";
-import { BsBorderAll } from "react-icons/bs";
-import { CgCardClubs, CgDisplayFlex, CgDockBottom } from "react-icons/cg";
+import { BsBorderAll, BsThreeDots } from "react-icons/bs";
+import { CgArrowsH, CgCardClubs, CgDisplayFlex, CgDockBottom } from "react-icons/cg";
 import { CiSliderHorizontal } from "react-icons/ci";
 import { FaFont, FaRegSquare } from "react-icons/fa6";
 import { GiAccordion } from "react-icons/gi";
@@ -18,7 +18,7 @@ import { LuPipette, LuSun } from "react-icons/lu";
 import { MdOutlineHorizontalRule, MdOutlineTextFields } from "react-icons/md";
 import { PiFrameCorners, PiListDashes, PiMouseScroll, PiSidebar } from "react-icons/pi";
 import { RiInputMethodLine } from "react-icons/ri";
-import { RxButton } from "react-icons/rx";
+import { RxButton, RxDropdownMenu } from "react-icons/rx";
 import { TbLayoutBottombarFilled, TbLayoutNavbarFilled } from "react-icons/tb";
 
 const ComponentsMenu = () => {
@@ -33,17 +33,17 @@ const ComponentsMenu = () => {
     bgVariant: "zinc-900",
     border: borderOptions,
     disableClose: true,
-  } as SidebarOptions;
+  } as TSidebarOptions;
 
   const itemOptions = {
     textVariant: colors.white,
-  } as SidebarItemOptions;
+  } as TSidebarItemOptions;
 
   const headerOptions = {
     bgVariant: "zinc-800",
     textVariant: colors.infoLight,
     placement: FlexTypes.Start,
-  } as SidebarHeaderOptions;
+  } as TSidebarHeaderOptions;
 
   const core = {
     accordion: {
@@ -171,17 +171,32 @@ const ComponentsMenu = () => {
     footer: {
       icon: <TbLayoutBottombarFilled />,
       title: "Footer",
-      link: "/components/footer",
+      link: "/components/navigation/footer",
     },
     navbar: {
       icon: <TbLayoutNavbarFilled />,
       title: "Navbar",
-      link: "/components/navbar",
+      link: "/components/navigation/navbar",
     },
     sidebar: {
       icon: <PiSidebar />,
       title: "Sidebar",
-      link: "/components/sidebar",
+      link: "/components/navigation/sidebar",
+    },
+    dropDown: {
+      icon: <RxDropdownMenu />,
+      title: "DropDown",
+      link: "/components/navigation/sidebar",
+    },
+    pagination: {
+      icon: <CgArrowsH />,
+      title: "Pagination",
+      link: "/components/navigation/sidebar",
+    },
+    breadCrumbs: {
+      icon: <BsThreeDots />,
+      title: "BreadCrumbs",
+      link: "/components/navigation/tab",
     },
   };
 
@@ -226,7 +241,12 @@ const ComponentsMenu = () => {
         </Sidebar.Item>
       ))}
       <Sidebar.Header options={headerOptions}>
-        <h1 className="text-xl font-serif ml-5">Navigation Components</h1>
+        <Link
+          to="/components/navigation"
+          className="text-xl font-serif ml-5 hover:opacity-70"
+        >
+          Navigation Components
+        </Link>
       </Sidebar.Header>
       {Object.keys(navigation).map((key) => (
         <Sidebar.Item options={itemOptions} icon={navigation[key].icon} key={key}>
