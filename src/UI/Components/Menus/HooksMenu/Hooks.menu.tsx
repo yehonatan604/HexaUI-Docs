@@ -10,8 +10,8 @@ import { CgScrollV } from "react-icons/cg";
 import { GrStorage } from "react-icons/gr";
 import { IoColorPaletteOutline, IoPlayForwardOutline } from "react-icons/io5";
 import { LiaSyncAltSolid } from "react-icons/lia";
-import { LuClipboardPaste, LuFormInput } from "react-icons/lu";
-import { MdOutlineInsertPageBreak } from "react-icons/md";
+import { LuClipboardPaste } from "react-icons/lu";
+import { MdInput, MdOutlineInsertPageBreak } from "react-icons/md";
 import { PiFlyingSaucerLight } from "react-icons/pi";
 import { TbFileOrientation, TbTypography } from "react-icons/tb";
 import { Link } from "react-router-dom";
@@ -107,7 +107,7 @@ const HooksMenu = () => {
       link: "/hooks/usePagination ",
     },
     useForm: {
-      icon: <LuFormInput />,
+      icon: <MdInput />,
       title: "useForm",
       link: "/hooks/useForm",
     },
