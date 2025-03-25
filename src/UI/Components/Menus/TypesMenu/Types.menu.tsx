@@ -1,9 +1,9 @@
 import { Sidebar } from "react-hexa-dev";
 import { FlexTypes } from "react-hexa-dev";
 import { useTheme } from "react-hexa-dev";
-import { SidebarOptions } from "react-hexa-dev";
-import { SidebarHeaderOptions } from "react-hexa-dev";
-import { SidebarItemOptions } from "react-hexa-dev";
+import { TSidebarOptions } from "react-hexa-dev";
+import { TSidebarHeaderOptions } from "react-hexa-dev";
+import { TSidebarItemOptions } from "react-hexa-dev";
 import { TBorder } from "react-hexa-dev";
 import { CgDisplayFlex, CgDisplaySpacing } from "react-icons/cg";
 import { CiDatabase } from "react-icons/ci";
@@ -30,17 +30,17 @@ const TypesMenu = () => {
     bgVariant: "zinc-900",
     border: borderOptions,
     disableClose: true,
-  } as SidebarOptions;
+  } as TSidebarOptions;
 
   const itemOptions = {
     textVariant: colors.white,
-  } as SidebarItemOptions;
+  } as TSidebarItemOptions;
 
   const headerOptions = {
     bgVariant: "zinc-800",
     textVariant: colors.infoLight,
     placement: FlexTypes.Start,
-  } as SidebarHeaderOptions;
+  } as TSidebarHeaderOptions;
 
   // Sidebar Items
   const component = {
