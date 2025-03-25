@@ -20,6 +20,7 @@ import DocPanelPage from "../Pages/Docs/Components/Layout/DocPanel/DocPanel.page
 import ScrollAreaPage from "../Pages/Docs/Components/Layout/ScrollArea/ScrollArea.page";
 import BlockPage from "../Pages/Docs/Components/Layout/Block/Block.page";
 import NavigationComponentsPage from "../Pages/Docs/Components/Navigation/Navigation.page";
+import FooterPage from "../Pages/Docs/Components/Navigation/Footer/Footer.page";
 
 const ComponentRoutes = () => (
   <Routes>
@@ -51,6 +52,7 @@ const ComponentRoutes = () => (
     </Route>
     <Route path="navigation">
       <Route index element={<NavigationComponentsPage />} />
+      <Route path="footer" element={<FooterPage />} />
     </Route>
   </Routes>
 );
