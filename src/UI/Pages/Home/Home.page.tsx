@@ -69,6 +69,7 @@ const Home = () => {
             direction: FlexDir.Row,
             justify: FlexTypes.Center,
             align: FlexTypes.Stretch,
+            wrap: "wrap",
           }}
           className="gap-6 flex-wrap max-w-6xl"
         >
