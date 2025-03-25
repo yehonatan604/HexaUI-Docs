@@ -3,29 +3,27 @@ import { hexaPath } from "../../../../../../Data/Constants/Paths";
 const dataGridEx1 = `import { AutoGrid, Flex, FlexTypes } from '${hexaPath}'
 
 const App = () => {  
+  const rows = [
+    // Header row
+    ["Name", "Age", "email", "Location"],
+    // Data rows
+    ["John Doe", 25, "john@email.com", "New York"],
+    ["Jane Smith", 30, "jane@email.com", "London"],
+    ["Bob Johnson", 28, "bob@email.com", "Paris"],
+    ["Alice Brown", 28, "alice@email.com", "Tokyo"],
+    ["Eve White", 35, "eve@email.com", "Berlin"],
+    ["Sam Black", 40, "sam@email.com", "Sydney"],
+  ].map((row) => row.map((cell) => <div>{cell}</div>));
+
   return (
     <Flex
       options={{
         justify: FlexTypes.Center,
         align: FlexTypes.Center,
       }}
-      className="m-auto gap-4 w-3/5 text-2xl"
+      className="m-auto gap-4 w-4/5 text-2xl"
     >
-      <AutoGrid
-        cols={3}
-        rowsArr={[
-          <p className="p-2">item 1</p>,
-          <p className="p-2">item 2</p>,
-          <p className="p-2">item 3</p>,
-          <p className="p-2">item 4</p>,
-          <p className="p-2">item 5</p>,
-          <p className="p-2">item 6</p>,
-          <p className="p-2">item 7</p>,
-          <p className="p-2">item 8</p>,
-          <p className="p-2">item 9</p>,
-        ]}
-        className="dark:text-info-l text-info-d text-sm"
-      />
+      <DataGrid rowsArr={rows} />
     </Flex>
   );
 };
@@ -34,29 +32,27 @@ const App = () => {
 const dataGridEx2 = `import { AutoGrid, Flex, FlexTypes } from '${hexaPath}'
 
 const App = () => {  
+  const rows = [
+    // Header row
+    ["Name", "Age", "email", "Location"],
+    // Data rows
+    ["John Doe", 25, "john@email.com", "New York"],
+    ["Jane Smith", 30, "jane@email.com", "London"],
+    ["Bob Johnson", 28, "bob@email.com", "Paris"],
+    ["Alice Brown", 28, "alice@email.com", "Tokyo"],
+    ["Eve White", 35, "eve@email.com", "Berlin"],
+    ["Sam Black", 40, "sam@email.com", "Sydney"],
+  ].map((row) => row.map((cell) => <div>{cell}</div>));
+
   return (
     <Flex
       options={{
         justify: FlexTypes.Center,
         align: FlexTypes.Center,
       }}
-      className="m-auto gap-4 w-3/5 text-2xl"
+      className="m-auto gap-4 w-4/5 text-2xl"
     >
-      <AutoGrid
-        cols={3}
-        rowsArr={[
-          <p className="p-2">item 1</p>,
-          <p className="p-2">item 2</p>,
-          <p className="p-2">item 3</p>,
-          <p className="p-2">item 4</p>,
-          <p className="p-2">item 5</p>,
-          <p className="p-2">item 6</p>,
-          <p className="p-2">item 7</p>,
-          <p className="p-2">item 8</p>,
-          <p className="p-2">item 9</p>,
-        ]}
-        className="dark:text-info-l text-info-d text-sm"
-      />
+      <DataGrid rowsArr={rows} />
     </Flex>
   );
 };

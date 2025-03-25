@@ -1,4 +1,4 @@
-import { DataGrid as AutoGrid, Flex, FlexTypes } from "react-hexa-dev";
+import { AutoGrid, Flex, FlexTypes } from "react-hexa-dev";
 
 const AutoGridExamples = () => {
   return (

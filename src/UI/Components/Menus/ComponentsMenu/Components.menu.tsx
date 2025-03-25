@@ -14,7 +14,7 @@ import { FaFont, FaRegSquare } from "react-icons/fa6";
 import { GiAccordion } from "react-icons/gi";
 import { GoSingleSelect } from "react-icons/go";
 import { IoIosCheckboxOutline, IoMdQuote } from "react-icons/io";
-import { LuPipette, LuSun } from "react-icons/lu";
+import { LuSun } from "react-icons/lu";
 import { MdOutlineHorizontalRule, MdOutlineTextFields } from "react-icons/md";
 import { PiFrameCorners, PiListDashes, PiMouseScroll, PiSidebar } from "react-icons/pi";
 import { RiInputMethodLine } from "react-icons/ri";
@@ -159,11 +159,6 @@ const ComponentsMenu = () => {
       icon: <RiInputMethodLine />,
       title: "TextInput",
       link: "/components/forms/text-input",
-    },
-    colorPicker: {
-      icon: <LuPipette />,
-      title: "ColorPicker",
-      link: "/components/forms/color-picker",
     },
   };
 

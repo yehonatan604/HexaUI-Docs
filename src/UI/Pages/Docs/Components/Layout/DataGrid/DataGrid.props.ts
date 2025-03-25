@@ -9,13 +9,6 @@ const props: TTableProps[] = [
         defaultValue: "null",
     },
     {
-        prop: "cols",
-        type: "number",
-        description: "The number of columns to display in the AutoGrid.",
-        required: true,
-        defaultValue: "null",
-    },
-    {
         prop: "rowsArr",
         type: "React.ReactNode[]",
         description: "The list of React nodes to display in the AutoGrid.",
@@ -39,6 +32,75 @@ const options: TTableProps[] = [
         required: false,
         defaultValue: "standard-l/standrad-d *",
     },
+    {
+        prop: "headerControls",
+        type: "'none' | 'filter' | 'sort' | 'search' | 'colHeaders' | 'all'",
+        description: `The type of header controls to display in the DataGrid. 'none' will display no controls, 'filter' will display filter controls, 'sort' will display sort controls, 'search' will display search controls, 'colHeaders' will display column headers, and 'all' will display all controls.`,
+        required: false,
+        defaultValue: "all",
+    },
+    {
+        prop: "headerBgColor",
+        type: "string",
+        description: "The background color for the header row of the DataGrid.",
+        required: false,
+        defaultValue: "standard-l/standard-d *",
+    },
+    {
+        prop: "headerTextColor",
+        type: "string",
+        description: "The text color for the header row of the DataGrid.",
+        required: false,
+        defaultValue: "standard-l/standard-d *",
+    },
+    {
+        prop: "rowBgColor",
+        type: "string",
+        description: "The background color for the data rows of the DataGrid.",
+        required: false,
+        defaultValue: "standard-l/standard-d *",
+    },
+    {
+        prop: "rowTextColor",
+        type: "string",
+        description: "The text color for the data rows of the DataGrid.",
+        required: false,
+        defaultValue: "standard-l/standard-d *",
+    },
+    {
+        prop: "rowHoverBgColor",
+        type: "string",
+        description: "The background color for the data rows of the DataGrid when hovered.",
+        required: false,
+        defaultValue: "standard-l/standard-d *",
+    },
+    {
+        prop: "rowHoverTextColor",
+        type: "string",
+        description: "The text color for the data rows of the DataGrid when hovered.",
+        required: false,
+        defaultValue: "standard-l/standard-d *",
+    },
+    {
+        prop: " striped",
+        type: "boolean",
+        description: "Whether to stripe the data rows of the DataGrid.",
+        required: false,
+        defaultValue: "false",
+    },
+    {
+        prop: "stripedBgColor",
+        type: "string",
+        description: "The background color for the striped data rows of the DataGrid.",
+        required: false,
+        defaultValue: "standard-l/standard-d *",
+    },
+    {
+        prop: "stripedTextColor",
+        type: "string",
+        description: "The text color for the striped data rows of the DataGrid.",
+        required: false,
+    }
 ];
 
 export { options, props };
